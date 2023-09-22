@@ -23,7 +23,7 @@ class Contact extends Model
 
                 
 
-            $adminEmail = "jk.web.dev30@gmail.com";
+            $adminEmail = "jk_web_dev@outlook.com";
 
             Mail::to($adminEmail)->send(new ContactMail($item));
 

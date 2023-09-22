@@ -7,6 +7,19 @@ GENERAL
 
 
 */
+html {
+    overflow: hidden;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    
+    /* prevent overscroll bounce*/
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    /* iOS velocity scrolling */
+}
 .w3-content img {
     scale: 1.1;
     max-width: 100%;
@@ -34,9 +47,9 @@ GENERAL
     box-shadow: 0 0 5px #00BBF9;
     width: 300px;
 
-    -moz-animation: pulse .8s infinite;
-    -webkit-animation: pulse .8s infinite;
-    animation: pulse .8s infinite;
+    -moz-animation: pulse .5s infinite;
+    -webkit-animation: pulse .5s infinite;
+    animation: pulse .5s infinite;
 
 }
 
@@ -46,7 +59,7 @@ GENERAL
     }
 
     to {
-        transform: translate(1650px, 0)
+        transform: translate(350%, 0)
     }
 }
 
@@ -687,6 +700,9 @@ MEDIA QUERIES
     }
     .sBox img {
         width:350px; 
+    }
+    .sContainer {
+        overflow:hidden; 
     }
 
 }
