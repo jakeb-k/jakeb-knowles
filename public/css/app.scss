@@ -1,0 +1,714 @@
+@import url('https://fonts.cdnfonts.com/css/bowlby-one');
+@import url('https://fonts.cdnfonts.com/css/heritho');
+
+/*
+
+GENERAL
+
+
+*/
+.w3-content img {
+    scale: 1.1;
+    max-width: 100%;
+}
+
+.w3-content {
+    margin-top: 40px;
+    scale: 1.25;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    background: rgb(117, 117, 117);
+    margin: auto;
+}
+
+.pulse {
+    display: block;
+    background-color: #00BBF9;
+    z-index: -1;
+    height: 4px;
+    color: #00BBF9;
+    box-shadow: 0 0 5px #00BBF9;
+    width: 300px;
+
+    -moz-animation: pulse .8s infinite;
+    -webkit-animation: pulse .8s infinite;
+    animation: pulse .8s infinite;
+
+}
+
+@keyframes pulse {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(1650px, 0)
+    }
+}
+
+/*
+
+
+
+HEADER BAR STYLING
+
+
+
+
+*/
+.navBar,
+.footerBar {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    color: #00BBF9;
+    background: rgb(40, 40, 40);
+}
+
+.nSec {
+    height: 75px;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 30%;
+    padding: 20px 0;
+    font-size: 24px;
+}
+
+.nSec a {
+    text-decoration: none;
+    box-shadow: inset 0 0 0 0 #00BBF9;
+    color: #00BBF9;
+    margin: 0 -.25rem;
+    transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+}
+
+.nSec a:hover {
+    box-shadow: inset 250px 0 0 0 #00BBF9;
+    color: white;
+}
+
+.nTitle {
+    width: 40%;
+
+    /* animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* transform: rotate(3deg); */
+    /* transform: rotate(0.3rad);/ */
+    /* transform: rotate(3grad); */
+    /* transform: rotate(.03turn);  */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*
+
+
+
+FOOTER STYLING
+
+
+
+*/
+.footerBar {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background: #018cbe;
+    color: rgb(40, 40, 40);
+    padding: 0;
+}
+
+.footerBar {
+    background: #018cbe;
+    color: rgb(40, 40, 40);
+}
+
+.fSec {
+
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 30%;
+    padding: 10px 0;
+}
+
+.fSec a {
+    font-size: 16px;
+    text-decoration: none;
+    box-shadow: inset 0 0 0 0 rgb(40, 40, 40);
+    color: rgb(40, 40, 40);
+    margin: 0 -.25rem;
+    transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+    padding: 0;
+}
+
+.fTitle {
+    width: 40%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.fSec a:hover {
+    box-shadow: inset 250px 0 0 0 rgb(40, 40, 40);
+    color: #00BBF9;
+    padding: 0;
+}
+
+/*
+
+
+
+
+SPLASH PAGE STYLING
+
+
+
+*/
+.nameTitle h1 {
+    font-family: 'Heritho';
+    color: #00BBF9;
+    font-size: 60px;
+}
+
+.nameTitle button {
+    border: none;
+    background: none;
+}
+
+.nameTitle button h1 {
+
+    color: #00BBF9;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #01698f, 0 0 10px #01698f, 0 0 15px #01698f, 0 0 20px #01698f, 0 0 50px #01698f, 0 0 60px #01698f, 0 0 70px #01698f;
+    }
+
+    to {
+        text-shadow: 0 0 10px #018cbe, 0 0 15px #018cbe, 0 0 20px #018cbe, 0 0 25px #018cbe, 0 0 60px #018cbe, 0 0 70px #018cbe, 0 0 80px #018cbe;
+    }
+}
+
+.subtitle h3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 32px;
+}
+
+.subtitle {
+    width: 90%;
+    margin: 0 5%;
+    background: rgb(40, 40, 40);
+    color: #018cbe;
+    text-align: center;
+    padding: 20px;
+    align-self: center;
+    border-radius: 5px;
+
+}
+
+.nameTitle {
+    margin: auto;
+    height: 200px;
+    background: rgb(40, 40, 40);
+    width: 40%;
+    padding: 10px;
+    box-shadow: 0 0 50px #01698f;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#splashContainer {
+    background-image: url('../images/circBg.gif');
+    height: 525px;
+    background-repeat: repeat;
+    padding-top: 50px;
+}
+
+.infoBox p {
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+#splashContainer video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*
+
+
+
+
+
+ABOUT SECTION STYLING
+
+
+
+*/
+.aContainer {
+    display: flex;
+    align-items: space-between;
+    flex-direction: row;
+    margin: auto;
+    background: rgb(40, 40, 40);
+    padding: 50px 5% 170px;
+}
+
+.aContainer h1 {
+    font-size: 36px;
+}
+
+.aContainer p {
+    font-size: 18px;
+    padding: 15px 0;
+}
+
+.aboutImg {
+    padding-top: 40px;
+    width: 100%;
+}
+
+.aboutImg img {
+    width: 390px;
+    height: 390px;
+    border: 2px solid #00BBF9;
+}
+
+.aboutContent {
+    width: 50%;
+    color: #00BBF9;
+    display: flex;
+    justify-content: center;
+}
+
+.aboutTitle h1,
+.infoBox h3 {
+    color: #00BBF9;
+    font-family: 'Heritho', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.aboutTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 10%;
+}
+
+.aboutTitle h1 {
+    margin-right: 25px;
+}
+
+.carouselExampleFade {
+
+    color: #00BBF9;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.infoBox {
+    margin-left: 10%;
+    height: 355px;
+    width: 85%;
+    background: rgb(40, 40, 40);
+    box-shadow: 20px 20px 0 #018cbe;
+    border-radius: 5px;
+    padding: 20px;
+    color: #018cbe;
+    border: 2px solid #00BBF9;
+}
+
+/*
+
+
+
+
+SLIDESHOW SECTION STYLING
+
+
+
+
+
+*/
+.sContainer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background: rgb(40, 40, 40);
+    padding: 50px 5% 100px;
+}
+
+.sContainer h1 {
+    font-family: 'Heritho', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #00BBF9;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+#slideshow {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    max-width: 100%;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: #018cbe rgb(117, 117, 117);
+    -moz-scrollbar-color: #018cbe rgb(117, 117, 117);
+    -webkit-scrollbar-color: #018cbe rgb(117, 117, 117);
+}
+
+.sBox img {
+    width: 360px;
+    object-fit: fill;
+}
+
+.sBox {
+    background: rgba(255, 255, 255, 0.447);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 360px;
+    margin: 0 20px;
+}
+
+.overlay-1 {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    height: 0;
+    width: 100%;
+    overflow-y: scroll;
+    backdrop-filter: blur(8px) brightness(80%);
+    transition: all .3s ease-in-out;
+    padding: 0px 20px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+.overlay-1 h3 {
+    font-family: 'Heritho', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.sBox:hover .overlay-1 {
+    bottom: 0;
+    height: 100%;
+}
+
+/*
+
+
+
+CONTACT SECTION STYLING
+
+
+
+
+*/
+.cContainer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background: rgb(40, 40, 40);
+    padding: 50px 5% 50px;
+}
+
+#contact {
+    align-self: center;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    background: rgb(40, 40, 40);
+    border: 3px solid #00BBF9;
+    box-shadow: 30px 30px 0 #018cbe;
+    padding: 20px;
+    color: #00BBF9;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input {
+    padding: 10px;
+
+}
+
+#note {
+    margin-bottom: 40px;
+}
+
+#contact h1 {
+    font-family: 'Heritho', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: 44px;
+    color: #00BBF9;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #01698f, 0 0 10px #01698f, 0 0 15px #01698f, 0 0 20px #01698f, 0 0 50px #01698f, 0 0 60px #01698f, 0 0 70px #01698f;
+    }
+
+    to {
+        text-shadow: 0 0 10px #018cbe, 0 0 15px #018cbe, 0 0 20px #018cbe, 0 0 25px #018cbe, 0 0 60px #018cbe, 0 0 70px #018cbe, 0 0 80px #018cbe;
+    }
+}
+
+#contact button {
+    border-radius: 5px;
+    box-shadow: 10px 10px 0 #018cbe;
+    transition: .5s ease-in-out;
+    padding-top: 10px;
+    font-size: 38px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 3px solid #00BBF9;
+    background: none;
+    color: #00BBF9;
+    font-family: 'Heritho', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#contact button span {
+    margin-top: 5px;
+}
+
+#contact button {
+    box-shadow: 0 0 5px #00BBF9;
+    border-radius: 80px;
+    transition: .5s ease-in-out;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    animation-delay: 0.3s;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #01698f, 0 0 10px #01698f, 0 0 15px #01698f, 0 0 20px #01698f, 0 0 50px #01698f, 0 0 60px #01698f, 0 0 70px #01698f;
+    }
+
+    to {
+        text-shadow: 0 0 10px #018cbe, 0 0 15px #018cbe, 0 0 20px #018cbe, 0 0 25px #018cbe, 0 0 60px #018cbe, 0 0 70px #018cbe, 0 0 80px #018cbe;
+    }
+}
+
+#contact button img {
+    transition: 0.4s ease-in-out;
+    transform: rotate(90deg);
+}
+
+#contact button:hover img {
+    transition: 0.4s ease-in-out;
+    transform: rotate(90deg) translate(0, -90px);
+}
+
+/*
+
+
+
+
+MEDIA QUERIES
+
+
+
+
+*/
+@media only screen and (max-width:1100px) {
+
+    .nSec a,
+    .fSec a {
+        font-size: 18px;
+
+    }
+
+    .nTitle {
+        scale: 0.9;
+    }
+
+    .nSec,
+    .fSec {
+        height: 25px;
+        padding: 0;
+    }
+
+    .aContainer p {
+        font-size: 14px;
+    }
+
+    .aboutTitle h1 {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+
+    .nTitle {
+        scale: 0.8;
+    }
+
+    .nameTitle {
+        width: 75%;
+        height: 250px;
+    }
+
+    .aContainer {
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .aboutImg {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding-top: 0;
+        padding-bottom: 50px;
+        margin-top: 0;
+        align-self: center;
+
+    }
+
+    .aContainer p {
+        font-size: 16px;
+    }
+
+    .aboutTitle h1 {
+        font-size: 32px;
+    }
+
+}
+
+@media only screen and (max-width:750px) {
+
+    .nSec,
+    .fSec {
+        flex-direction: column;
+        max-width: fit-content;
+    }
+
+    .fSec {
+        margin-top: 5px;
+    }
+
+    .aContainer p {
+        font-size: 14px;
+    }
+
+    .aboutTitle h1 {
+        font-size: 28px;
+    }
+
+    .navBar,
+    .footerBar {
+
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .footerBar {
+        padding: 10px 0 0 0;
+    }
+
+    .nameTitle h1 {
+        font-size: 49px;
+        padding: 0;
+    }
+
+    .subtitle h3 {
+        font-size: 26px;
+    }
+
+    .pulse {
+        -moz-animation: pulse 1.2s infinite;
+        -webkit-animation: pulse 1.2s infinite;
+        animation: pulse 1.2s infinite;
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width:570px) {
+    .aContainer p {
+        font-size: 12px;
+    }
+
+    .aboutTitle h1 {
+        font-size: 22px;
+    }
+
+    .infoBox {
+        height: 375px;
+    }
+
+    .infoBox h3 {
+        font-size: 18px;
+    }
+
+}
+
+@media only screen and (max-width:650px) {
+    .w3-content img {
+        scale: 1;
+        max-width: 100%;
+    }
+
+    .w3-content {
+        margin-top: 20px;
+        scale: 1;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    #contact {
+        width: 90%;
+    }
+
+    #contact button {
+        font-size: 32px;
+    }
+
+    #contact button:hover img {
+        transition: 0.4s ease-in-out;
+        transform: rotate(90deg) translate(0, -20px);
+    }
+}
