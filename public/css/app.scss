@@ -556,15 +556,10 @@ MEDIA QUERIES
 @media only screen and (max-width:1100px) {
 
     .nSec a,
-    .fSec a {
-        font-size: 18px;
+    .fSec a{
+        font-size: 16px;
 
     }
-
-    .nTitle {
-        scale: 0.9;
-    }
-
     .nSec,
     .fSec {
         height: 25px;
@@ -651,7 +646,7 @@ MEDIA QUERIES
     }
 
     .nameTitle h1 {
-        font-size: 49px;
+        font-size: 46px;
         padding: 0;
     }
 
@@ -669,11 +664,11 @@ MEDIA QUERIES
 
 @media only screen and (max-width:570px) {
     .aContainer p {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .aboutTitle h1 {
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .infoBox {
@@ -682,6 +677,16 @@ MEDIA QUERIES
 
     .infoBox h3 {
         font-size: 18px;
+    }
+    .aboutImg img {
+        width: 350px;
+        height:350px; 
+    }
+    .sBox {
+        width:350px; 
+    }
+    .sBox img {
+        width:350px; 
     }
 
 }
@@ -711,4 +716,8 @@ MEDIA QUERIES
         transition: 0.4s ease-in-out;
         transform: rotate(90deg) translate(0, -20px);
     }
+    .fTitle {
+        font-size:12px; 
+    }
+    
 }
