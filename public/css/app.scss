@@ -36,16 +36,18 @@ body {
     border-radius: 3px;
     background: rgb(117, 117, 117);
     margin: auto;
+    overflow:hidden;
 }
 
 .pulse {
+    
     display: block;
     background-color: #00BBF9;
     z-index: -1;
     height: 4px;
     color: #00BBF9;
     box-shadow: 0 0 5px #00BBF9;
-    width: 300px;
+    width: 10%;
 
     -moz-animation: pulse .5s infinite;
     -webkit-animation: pulse .5s infinite;
@@ -59,7 +61,7 @@ body {
     }
 
     to {
-        transform: translate(350%, 0)
+        transform: translate(1000%, 0)
     }
 }
 
