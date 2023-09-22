@@ -676,7 +676,7 @@ MEDIA QUERIES
         display:none; 
     }
     .subtitle h3 {
-        font-size: 26px;
+        font-size: 24px;
     }
 }
 
@@ -701,10 +701,10 @@ MEDIA QUERIES
         height:350px; 
     }
     .sBox {
-        width:350px; 
+        width:300px; 
     }
     .sBox img {
-        width:350px; 
+        width:300px; 
     }
     .sContainer {
         overflow:hidden; 
@@ -726,7 +726,8 @@ MEDIA QUERIES
 
 @media only screen and (max-width:600px) {
     #contact {
-        width: 90%;
+        width: 95%;
+        box-shadow:0 0 10px #00BBF9; 
     }
 
     #contact button {
