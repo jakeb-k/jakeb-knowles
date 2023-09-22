@@ -88,11 +88,15 @@ Since then I have developed a large range of technical skills to become a full-s
   
     <div class="modal fade" id="exampleModal0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
+            
             <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
                 <?php $images = explode(",",$posts[0]->images); ?>
                 <div class="w3-content w3-display-container">
                     @foreach($images as $img)
-                        <img class="mySlides0" src="{{url('images/0/'.$img.'.png')}}" /> 
+                        <img class="mySlides0" src="{{url('images/0/'.$img.'.PNG')}}" /> 
                     @endforeach
                     <button class="w3-button w3-display-left" onclick="plusDivs0(-1)">&#10094;</button>
                     <button class="w3-button w3-display-right" onclick="plusDivs0(+1)">&#10095;</button>
@@ -127,10 +131,13 @@ Since then I have developed a large range of technical skills to become a full-s
     <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
                 <?php $images = explode(",",$posts[1]->images); ?>
                 <div class="w3-content w3-display-container">
                     @foreach($images as $img)
-                        <img class="mySlides1" src="{{url('images/1/'.$img.'.png')}}" /> 
+                        <img class="mySlides1" src="{{url('images/1/'.$img.'.PNG')}}" /> 
                     @endforeach
                     <button class="w3-button w3-display-left" onclick="plusDivs1(-1)">&#10094;</button>
                     <button class="w3-button w3-display-right" onclick="plusDivs1(+1)" style="max-width:120%;">&#10095;</button>
@@ -166,10 +173,16 @@ Since then I have developed a large range of technical skills to become a full-s
     <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
                 <?php $images = explode(",",$posts[2]->images); ?>
                 <div class="w3-content w3-display-container">
                     @foreach($images as $img)
-                        <img class="mySlides2" src="{{url('images/2/'.$img.'.png')}}" style="scale:0.8;"/> 
+                        <img class="mySlides2" src="{{url('images/2/'.$img.'.PNG')}}" style="scale:0.8;"/> 
                     @endforeach
                     <button class="w3-button w3-display-left" onclick="plusDivs2(-1)">&#10094;</button>
                     <button class="w3-button w3-display-right" onclick="plusDivs2(+1)" style="max-width:120%;">&#10095;</button>
@@ -205,10 +218,13 @@ Since then I have developed a large range of technical skills to become a full-s
     <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
                 <?php $images = explode(",",$posts[3]->images); ?>
                 <div class="w3-content w3-display-container">
                     @foreach($images as $img)
-                        <img class="mySlides3" src="{{url('images/3/'.$img.'.png')}}" /> 
+                        <img class="mySlides3" src="{{url('images/3/'.$img.'.PNG')}}" /> 
                     @endforeach
                     <button class="w3-button w3-display-left" onclick="plusDivs3(-1)">&#10094;</button>
                     <button class="w3-button w3-display-right" onclick="plusDivs3(+1)" style="max-width:120%;">&#10095;</button>
@@ -244,10 +260,13 @@ Since then I have developed a large range of technical skills to become a full-s
     <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
                 <?php $images = explode(",",$posts[4]->images); ?>
                 <div class="w3-content w3-display-container">
                     @foreach($images as $img)
-                        <img class="mySlides4" src="{{url('images/4/'.$img.'.png')}}" style="scale:0.8;"/> 
+                        <img class="mySlides4" src="{{url('images/4/'.$img.'.PNG')}}" style="scale:0.8;"/> 
                     @endforeach
                     <button class="w3-button w3-display-left" onclick="plusDivs4(-1)">&#10094;</button>
                     <button class="w3-button w3-display-right" onclick="plusDivs4(+1)" style="max-width:120%;">&#10095;</button>
@@ -282,6 +301,9 @@ Since then I have developed a large range of technical skills to become a full-s
     <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
                 <h3>Pictures are currently unavailable :(</h3>
             </div>
         </div>

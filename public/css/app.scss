@@ -7,6 +7,14 @@ GENERAL
 
 
 */
+.close {
+    position:fixed;
+    z-index:4; 
+}
+.close span {
+    color: #00BBF9;
+    opacity: 1;
+}
 html {
     overflow: hidden;
     width: 100%;
