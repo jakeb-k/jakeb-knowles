@@ -661,19 +661,22 @@ MEDIA QUERIES
     }
 
     .nameTitle h1 {
-        font-size: 46px;
+        font-size: 40px;
         padding: 0;
+        animation: none !important;
     }
-
+    h1, h3{
+        animation:none !important; 
+    }
+    .sContainer h1 {
+        animation: none !important;
+    }
+    .pulse {
+        animation:none !important; 
+        display:none; 
+    }
     .subtitle h3 {
         font-size: 26px;
-    }
-
-    .pulse {
-        -moz-animation: pulse 1.2s infinite;
-        -webkit-animation: pulse 1.2s infinite;
-        animation: pulse 1.2s infinite;
-        width: 150px;
     }
 }
 
