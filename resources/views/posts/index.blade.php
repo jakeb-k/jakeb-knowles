@@ -14,7 +14,7 @@
 </div>
 <div class="aContainer">
     <div class="aboutImg">
-        <img src="#">
+        <img src="images/jakey.jpg">
     </div>
     <div id="aboutContent">       <!--Visionary,Dreamer,Leader-->
         <div class="aboutTitle"><h1>About:</h1>
