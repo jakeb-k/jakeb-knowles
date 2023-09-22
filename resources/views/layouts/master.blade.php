@@ -4,9 +4,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>Jakeb Knowles</title>
-        @yield('meta')
+        <meta name="description" content="Explore a world of dynamic web experiences through my web development portfolio. Discover a diverse range of innovative projects showcasing cutting-edge design, flawless functionality, and seamless user experiences. Let's turn your digital dreams into reality – one click at a time.">
+
         <!-- Fonts -->
         
         <link rel="stylesheet" href="{{asset('css/app.scss')}}" type="text/css">
