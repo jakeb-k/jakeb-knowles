@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name'); 
             $table->string('description'); 
             $table->string('images')->nullable(); 
-            $table->string('url'); 
+            $table->string('url')->nullable(); 
             $table->string('techs');
             $table->string('status'); 
             $table->string('logo'); 

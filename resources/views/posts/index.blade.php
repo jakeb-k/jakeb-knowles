@@ -58,7 +58,9 @@ Since then I have developed a large range of technical skills to become a full-s
                 <h5><i>{{$p->techs}}</i></h5>
                 <p>{{$p->description}}</p> 
                 <a data-toggle="modal" data-target="#exampleModal{{$loop->index}}" style="text-decoration:underline;"> View Pictures </a>
+                @if($p->url)
                 <br><a href="{{url($p->url)}}">{{$p->url}}</a>
+                @endif
                 <p ><strong style="font-size:18px; margin-top:50px;"> {{$p->status}}</strong></p>
             </div>
         </div>
@@ -182,7 +184,7 @@ Since then I have developed a large range of technical skills to become a full-s
                 <?php $images = explode(",",$posts[2]->images); ?>
                 <div class="w3-content w3-display-container">
                     @foreach($images as $img)
-                        <img class="mySlides2" src="{{url('images/2/'.$img.'.PNG')}}" style="scale:0.8;"/> 
+                        <img class="mySlides2" src="{{url('images/2/'.$img.'.png')}}" style="scale:0.8;"/> 
                     @endforeach
                     <button class="w3-button w3-display-left" onclick="plusDivs2(-1)">&#10094;</button>
                     <button class="w3-button w3-display-right" onclick="plusDivs2(+1)" style="max-width:120%;">&#10095;</button>
