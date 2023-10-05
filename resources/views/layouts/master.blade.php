@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Jakeb Knowles</title>
         <meta name="description" content="Explore a world of dynamic web experiences through my web development portfolio. Discover a diverse range of innovative projects showcasing cutting-edge design, flawless functionality, and seamless user experiences. Let's turn your digital dreams into reality – one click at a time. All sites made by Jakeb Knowles">
+        <link rel="icon" type="image/x-icon" href="{{url('images/favicon.ico')}}">
 
         <!-- Fonts -->
         
