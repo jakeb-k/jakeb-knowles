@@ -16,7 +16,7 @@
     <div class="aboutImg">
         <img src="images/jakey.jpg">
     </div>
-    <div id="aboutContent">       <!--Visionary,Dreamer,Leader-->
+    <div id="aboutContent">       
         <div class="aboutTitle"><h1>About:</h1>
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval=3000>
             <div class="carousel-inner">
@@ -132,9 +132,9 @@ Since then I have developed a large range of technical skills to become a full-s
   
     <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
+            <div class="modal-content" style="scale:0.47;margin-top:-250px; font-size:108px; color:#00BBF9;">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true" style="font-size:108px; color:#00BBF9;">&times;</span>
                 </button>
                 <?php $images = explode(",",$posts[1]->images); ?>
                 <div class="w3-content w3-display-container">
@@ -174,7 +174,7 @@ Since then I have developed a large range of technical skills to become a full-s
   
     <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
+            <div class="modal-content" style="scale:0.57;margin-top:-250px;">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -306,10 +306,37 @@ Since then I have developed a large range of technical skills to become a full-s
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h3>Pictures are currently unavailable :(</h3>
+                <?php $images = explode(",",$posts[4]->images); ?>
+                <div class="w3-content w3-display-container">
+                    @foreach($images as $img)
+                        <img class="mySlides5" src="{{url('images/5/'.$img.'.PNG')}}" /> 
+                    @endforeach
+                    <button class="w3-button w3-display-left" onclick="plusDivs5(-1)">&#10094;</button>
+                    <button class="w3-button w3-display-right" onclick="plusDivs5(+1)" style="max-width:120%;">&#10095;</button>
+                </div>
             </div>
         </div>
     </div>
+    <script>
+        var slideIndex5 = 1;
+        showDivs5(slideIndex5)
+
+        function plusDivs5(n) {
+        showDivs5(slideIndex4 += n);
+        }
+
+        function showDivs5(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides5");
+        if (n > x.length) {slideIndex4 = 1}
+        if (n < 1) {slideIndex4 = x.length} ;
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex4-1].style.display = "block";
+        }
+    </script>
+
     
 
     {{-- MODAL 5 END HERE --}}

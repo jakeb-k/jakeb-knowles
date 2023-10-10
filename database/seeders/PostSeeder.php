@@ -23,15 +23,6 @@ class PostSeeder extends Seeder
             'logo'=>'mmLogo.png']);
 
         DB::table('posts')->insert(
-            ['name'=>'F Service',
-            'description'=>'A web application that imitates popular food delivery services. It allows users to view restaurants, make orders and favourite dishes. Restaurants can create an account, display their items, receive orders, tick orders off with Create, Read, Update and Delete functionality on all dishes. ',
-            'images'=>'1,2,3,4,5,6',
-            'url'=>'https://foodservice-mock.online/',
-            'techs'=>'Business Analysis, UI Design, Full Stack Development (Laravel, Blade), SQL (SQLite)',
-            'status'=>'Completed July 23',
-            'logo'=>'fsLogo.png']);
-
-        DB::table('posts')->insert(
             ['name'=>'HaHa Hub',
             'description'=>'A joke generator app, built with angular/ionic. Pick a category and get a related joke. This app is monetized through google AdMob and uses a free API to produce jokes. ',
             'images'=>'1,2',
@@ -40,27 +31,45 @@ class PostSeeder extends Seeder
             'logo'=>'hahaLogo.png']);
 
         DB::table('posts')->insert(
+            ['name'=>'Japres',
+            'description'=>"Japres is an educational app designed to introduce the
+                Japanese language to children aged 7-14. It's a shining example
+                of synergy between Ionic and Angular technologies. In my role as
+                the project lead, I demonstrated exceptional leadership skills by
+                overseeing the complete Software Development Life Cycle (SDLC),
+                from concept to execution, ensuring a seamless and engaging
+                language learning experience. As lead developer, I oversaw all
+                aspects of development, set and met deadlines, delegated tasks,
+                and crafted engaging games for effective language learning",
+            'images'=>'1,2,3,4,5,6,7,8,9',
+            'techs'=>'Systems Analysis, Project Management, Team Leadership, App Development (Angular - Ionic)',
+            'status'=>'Scheduled Release for October 23',
+            'logo'=>'japresLogo.png'
+        ]);
+         DB::table('posts')->insert(
             ['name'=>'Alcay',
             'description'=>'A front-end demonstration (not functional) of a splash page that is used to grab the users attention and to follow the call to action, of getting in contact with Alcay. ',
             'images'=>'1,2',
             'techs'=>'UI Design, Front-End (React.js)',
             'status'=>'Completed July 22',
-            'logo'=>'alcLogo.PNG']);
-       
-        DB::table('posts')->insert(
-            ['name'=>'Japres','description'=>'Japanese learning app for primary and high school students to learn japanese through fun interactive games. I was the lead developer of this project and guided the team towards creating engaging, and high quality software by outlining the software architecture to follow as well as designating roles and responsibilities to ensure smooth progression towards client delivery',
-            'images'=>'1,2',
-            'techs'=>'Systems Analysis, UI Design, Project Management, Team Leadership, App Development (Angular - Ionic)',
-            'status'=>'Scheduled Release for October 23',
-            'logo'=>'japresLogo.png']);
+            'logo'=>'alcLogo.PNG'
+        ]);
 
         DB::table('posts')->insert(
-            ['name'=>'Store Score',
-            'description'=>'An application that allows users to find any store in the world and write a review about it. The application uses googles Places API to get all the restaurants based in the searched location to allow for a review. User account page also shows the number of reviews submitted and the average rating the user gives out. Currently works in browser, but requires native components to be imported to allow for mobile porting. ',
-            'images'=>'1',
-            'techs'=>'Business Analysis, UI Design, RESTful APIs, App Development (Angular - Ionic)',
-            'status'=>'In Progress',
-            'logo'=>'ssLogo.png']);
+            ['name'=>'F Service',
+            'description'=>'A web application that imitates popular food delivery services. It allows users to view restaurants, make orders and favourite dishes. Restaurants can create an account, display their items, receive orders, tick orders off with Create, Read, Update and Delete functionality on all dishes. ',
+            'images'=>'1,2,3,4,5,6',
+            'techs'=>'Business Analysis, UI Design, Full Stack Development (Laravel, Blade), SQL (SQLite)',
+            'status'=>'Completed July 23, currently down for maintenance and update',
+            'logo'=>'fsLogo.png'
+        ]);
+        DB::table('posts')->insert(
+            ['name'=>"Freeman's Mowing",
+            'description'=>" I created Freeman's Mowing, a full-stack project for a local mowing business. It includes a user-friendly website using HTML, CSS, and jQuery for the front end. Email functionality connects with potential customers, and SEO boosts online visibility, demonstrating my end-to-end solutions for small businesses, merging tech skills with marketing to drive growth.",
+            'images'=>'1,2,3,4,5',
+            'techs'=>'HTML5 & SCSS, jQuery, JavaScript, PHP - Laravel (Backend), SQLite, SEO, SMTP Config, Web Hosting (SSH), Git (Version Control), Canva (UI Design)',
+            'status'=>'In Progress - Scheduled Release for Late Oct - Early Nov',
+            'logo'=>'mowgo.png']);
 
     }
 }
