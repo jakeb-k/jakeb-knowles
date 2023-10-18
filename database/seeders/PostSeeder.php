@@ -52,7 +52,7 @@ class PostSeeder extends Seeder
             'images'=>'1,2',
             'techs'=>'UI Design, Front-End (React.js)',
             'status'=>'Completed July 22',
-            'logo'=>'alcLogo.PNG'
+            'logo'=>'alcLogo1.PNG'
         ]);
 
         DB::table('posts')->insert(
