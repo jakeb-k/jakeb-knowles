@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\PrivacyController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,4 @@ use App\Http\Controllers\PostController;
 Route::resource('/', PostController::class);
 
 Route::post('/contact', [PostController::class, 'store']); 
+Route::get('/hahahubprivacy',[PrivacyController::class, 'hahahub']); 
