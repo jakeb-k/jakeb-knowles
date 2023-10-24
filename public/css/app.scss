@@ -264,9 +264,9 @@ SPLASH PAGE STYLING
 }
 
 #splashContainer {
-    background-image: url('../images/circBg.gif');
+    background: linear-gradient(rgb(83, 200, 244) 3.8%, rgb(36, 45, 123) 91.1%);
     height: 525px;
-    background-repeat: repeat;
+
     padding-top: 50px;
 }
 
