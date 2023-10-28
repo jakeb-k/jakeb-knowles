@@ -311,8 +311,8 @@ Since then I have developed a large range of technical skills to become a full-s
                     @foreach($images as $img)
                         <img class="mySlides5" src="{{url('images/5/'.$img.'.PNG')}}" /> 
                     @endforeach
-                    <button class="w3-button w3-display-left" onclick="plusDivs5(-1)">&#10094;</button>
-                    <button class="w3-button w3-display-right" onclick="plusDivs5(+1)" style="max-width:120%;">&#10095;</button>
+                    <button class="w3-button w3-display-left" onclick="plusDivs5(-1)" >&#10094;</button>
+                    <button class="w3-button w3-display-right" onclick="plusDivs5(+1)" style="background:#00BBF9;max-width:120%;">&#10095;</button>
                 </div>
             </div>
         </div>
