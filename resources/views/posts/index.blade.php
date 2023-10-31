@@ -1,4 +1,8 @@
 @extends('layouts.master')
+<title>Jakeb Knowles - Software Engineer</title>
+@section('meta')
+<meta name="description" content="">
+@endsection
 @section('content')
 <div id="splashContainer">
     <div class="nameTitle">
@@ -56,7 +60,7 @@ Since then I have developed a large range of technical skills to become a full-s
                 <p>{{$p->description}}</p> 
                 <a data-toggle="modal" data-target="#exampleModal{{$loop->index}}" style="text-decoration:underline;"> View Pictures </a>
                 @if($p->url)
-                <br><p>{{$p->url}}</p>
+                <br><a href="{{url($p->url)}}">{{$p->url}}</a>
                 @endif
                 <p ><strong style="font-size:18px; margin-top:50px;"> {{$p->status}}</strong></p>
             </div>
@@ -340,7 +344,3 @@ Since then I have developed a large range of technical skills to become a full-s
 
 
 @endsection
-
-
-
-                
