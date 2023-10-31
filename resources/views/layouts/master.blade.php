@@ -4,14 +4,19 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Jakeb Knowles</title>
-        <meta name="description" content="Explore a world of dynamic web experiences through my software development portfolio. Discover a diverse range of innovative projects showcasing cutting-edge design, flawless functionality, and seamless user experiences. Let's turn your digital dreams into reality – one click at a time. All sites made by Jakeb Knowles">
+        <title>Jakeb Knowles - Software Engineer</title>
+        <meta name="description" content="Explore a world of dynamic web and mobile experiences through Jakeb Knowles software development portfolio. Located on the Gold Coast, I have a passion for all things tech and software engineering related. Find your next software developer / engineer / analyst, and give Jakeb Knowles a message today!">
         <link rel="icon" type="image/x-icon" href="{{url('images/favicon.ico')}}">
 
         <!-- Fonts -->
         
         <link rel="stylesheet" href="{{asset('css/app.scss')}}" type="text/css">
-        
+        <!--CANONICAL URL CREATOR --> 
+        @if (Str::startsWith($current = url()->current(), 'https://www.'))
+            <link rel="canonical" href="{{ str_replace('https://www.', 'https://', $current) }}">
+        @else
+            <link rel="canonical" href="{{ str_replace('https://', 'https://www.', $current) }}">
+        @endif
        
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 

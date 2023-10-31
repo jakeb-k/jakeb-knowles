@@ -1,8 +1,4 @@
 @extends('layouts.master')
-<title>Jakeb Knowles</title>
-@section('meta')
-<meta name="description" content="">
-@endsection
 @section('content')
 <div id="splashContainer">
     <div class="nameTitle">
@@ -49,7 +45,7 @@ Since then I have developed a large range of technical skills to become a full-s
 <div class="line"><div class="pulse"></div></div>
 <div class="sContainer">
     <h1>Projects</h1>
-    <h3 class="projIn"> Click to See More About Each Project! </h3>
+    <h3 class="projIn"> Click / Hover to See More About Each Project! </h3>
     <div id="slideshow">
         @foreach($posts as $p)
         <div class="sBox">
@@ -60,7 +56,7 @@ Since then I have developed a large range of technical skills to become a full-s
                 <p>{{$p->description}}</p> 
                 <a data-toggle="modal" data-target="#exampleModal{{$loop->index}}" style="text-decoration:underline;"> View Pictures </a>
                 @if($p->url)
-                <br><a href="{{url($p->url)}}">{{$p->url}}</a>
+                <br><p>{{$p->url}}</p>
                 @endif
                 <p ><strong style="font-size:18px; margin-top:50px;"> {{$p->status}}</strong></p>
             </div>
