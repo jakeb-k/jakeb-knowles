@@ -341,14 +341,6 @@ Since then I have developed a large range of technical skills to become a full-s
 
 @endsection
 
-<!-- <div class="infoBox">
-        <h3> CODE CREATE CONQUER </h3>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Architecto natus commodi atque culpa fuga eligendi odio odit ipsa. 
-            Nulla autem minus rerum, quidem et deleniti architecto enim! Magni, 
-            voluptate reprehenderit! </p>
-    </div>
-    <div class="pBtn"></div> -->
 
 
                 
