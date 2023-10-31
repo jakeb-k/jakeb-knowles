@@ -49,6 +49,7 @@ Since then I have developed a large range of technical skills to become a full-s
 <div class="line"><div class="pulse"></div></div>
 <div class="sContainer">
     <h1>Projects</h1>
+    <h3 class="projIn"> Click to See More About Each Project! </h3>
     <div id="slideshow">
         @foreach($posts as $p)
         <div class="sBox">
