@@ -19,7 +19,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+       
     </head>
     <script>
         $(function () {
@@ -47,9 +47,20 @@
             })
         });
     </script>
+    <script>
+         $(document).ready(function() {
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 600) { // Adjust the scroll position as needed
+                    $('#navBar').addClass('shrunken');
+                } else {
+                    $('#navBar').removeClass('shrunken');
+                }
+                });
+            });  
+    </script>
     <body>
-        <div id="headCont">
-            <div class="navBar">
+       
+            <div id="navBar" class="">
                 <div class="nSec">
                     <a class="about" href="">About</a>
                     <a class="project" href="">Projects</a>
@@ -62,7 +73,7 @@
                     <a class="repo" href="https://github.com/jakeb-k">Repositories</a>
                 </div>
             </div>
-        </div>
+       
         @yield('content')
         
         <div class="footerBar">
@@ -80,3 +91,6 @@
         </div>
     </body>
 </html>
+<script>
+   
+</script>

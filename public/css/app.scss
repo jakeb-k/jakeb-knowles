@@ -18,15 +18,15 @@ GENERAL
 }
 
 html {
-    overflow: hidden;
+    
     width: 100%;
 }
 
 body {
-    height: 100%;
+  
 
     /* prevent overscroll bounce*/
-    overflow-y: scroll;
+   
     -webkit-overflow-scrolling: touch;
     /* iOS velocity scrolling */
 }
@@ -86,17 +86,44 @@ HEADER BAR STYLING
 
 
 */
-.navBar,
 .footerBar {
     display: flex;
     flex-direction: row;
     text-align: center;
     color: #00BBF9;
     background: rgb(40, 40, 40);
+    transition: 0.3s ease-in-out
+}
+#navBar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    color: #00BBF9;
+    background: rgb(40, 40, 40);
+    transition: 0.5s ease-in-out;
+}
+#navBar.shrunken * {
+    transition: 0.5s ease-in-out;
+    scale: 0.825;
+    margin-top:-5px; 
 }
 
+#navBar.shrunken {
+    height: 50px;
+    transition: 0.3s ease-in-out;
+    box-shadow:0 0 30px #00BBF9; 
+}
+
+.shrunken img {
+    display:none; 
+    transition: 0.3s ease-in-out;
+}
 .nSec {
-    height: 75px;
+    height:75px; 
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     flex-direction: row;
@@ -104,6 +131,7 @@ HEADER BAR STYLING
     width: 30%;
     padding: 20px 0;
     font-size: 24px;
+    transition: 0.3s ease-in-out;
 }
 
 .nSec a {
@@ -121,15 +149,6 @@ HEADER BAR STYLING
 
 .nTitle {
     width: 40%;
-
-    /* animation-name: spin;
-    animation-duration: 5000ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    /* transform: rotate(3deg); */
-    /* transform: rotate(0.3rad);/ */
-    /* transform: rotate(3grad); */
-    /* transform: rotate(.03turn);  */
 }
 
 @keyframes spin {
@@ -256,7 +275,7 @@ SPLASH PAGE STYLING
 }
 
 .nameTitle {
-    margin: auto;
+    margin:75px auto;
     height: 200px;
     background: rgb(40, 40, 40);
     width: 40%;
@@ -268,9 +287,8 @@ SPLASH PAGE STYLING
 
 #splashContainer {
     background: linear-gradient(rgb(83, 200, 244) 3.8%, rgb(36, 45, 123) 91.1%);
-    height: 525px;
 
-    padding-top: 50px;
+    padding: 100px 0 250px;
 }
 
 .infoBox p {
@@ -707,7 +725,7 @@ MEDIA QUERIES
         font-size: 28px;
     }
 
-    .navBar,
+    #navBar,
     .footerBar {
 
         display: flex;
