@@ -305,13 +305,13 @@ Since then I have developed a large range of technical skills to become a full-s
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <?php $images = explode(",",$posts[4]->images); ?>
+                <?php $images = explode(",",$posts[5]->images); ?>
                 <div class="w3-content w3-display-container">
                     @foreach($images as $img)
                         <img class="mySlides5" src="{{url('images/5/'.$img.'.PNG')}}" /> 
                     @endforeach
                     <button class="w3-button w3-display-left" onclick="plusDivs5(-1)" >&#10094;</button>
-                    <button class="w3-button w3-display-right" onclick="plusDivs5(+1)" style="background:#00BBF9;max-width:120%;">&#10095;</button>
+                    <button class="w3-button w3-display-right" onclick="plusDivs5(+1)">&#10095;</button>
                 </div>
             </div>
         </div>
@@ -321,24 +321,67 @@ Since then I have developed a large range of technical skills to become a full-s
         showDivs5(slideIndex5)
 
         function plusDivs5(n) {
-        showDivs5(slideIndex4 += n);
+        showDivs5(slideIndex5 += n);
         }
 
         function showDivs5(n) {
         var i;
         var x = document.getElementsByClassName("mySlides5");
-        if (n > x.length) {slideIndex4 = 1}
-        if (n < 1) {slideIndex4 = x.length} ;
+        if (n > x.length) {slideIndex5 = 1}
+        if (n < 1) {slideIndex5 = x.length} ;
         for (i = 0; i < x.length; i++) {
             x[i].style.display = "none";
         }
-        x[slideIndex4-1].style.display = "block";
+        x[slideIndex5-1].style.display = "block";
         }
     </script>
 
     
 
     {{-- MODAL 5 END HERE --}}
+
+    {{-- MODAL 6 START HERE--}}
+  
+    <div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="scale:0.8;margin-top:-50px; font-size:108px; color:#00BBF9;background:none;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <?php $images = explode(",",$posts[6]->images); ?>
+                <div class="w3-content w3-display-container">
+                    @foreach($images as $img)
+                        <img class="mySlides6" src="{{url('images/6/'.$img.'.PNG')}}" /> 
+                    @endforeach
+                    <button class="w3-button w3-display-left" onclick="plusDivs6(-1)" style="margin-left:-50px;">&#10094;</button>
+                    <button class="w3-button w3-display-right" onclick="plusDivs6(+1)" style="margin-right:-50px;">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var slideIndex6 = 1;
+        showDivs6(slideIndex6)
+
+        function plusDivs6(n) {
+        showDivs6(slideIndex6 += n);
+        }
+
+        function showDivs6(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides6");
+        if (n > x.length) {slideIndex6 = 1}
+        if (n < 1) {slideIndex6 = x.length} ;
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex6-1].style.display = "block";
+        }
+    </script>
+
+    
+
+    {{-- MODAL 6 END HERE --}}
 
 
 @endsection
