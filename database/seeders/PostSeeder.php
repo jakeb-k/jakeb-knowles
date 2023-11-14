@@ -46,23 +46,6 @@ class PostSeeder extends Seeder
             'status'=>'Scheduled Release for October 23',
             'logo'=>'japresLogo.png'
         ]);
-         DB::table('posts')->insert(
-            ['name'=>'Alcay',
-            'description'=>'A front-end demonstration (not functional) of a splash page that is used to grab the users attention and to follow the call to action, of getting in contact with Alcay. ',
-            'images'=>'1,2',
-            'techs'=>'UI Design, Front-End (React.js)',
-            'status'=>'Completed July 22',
-            'logo'=>'alcLogo1.PNG'
-        ]);
-
-        DB::table('posts')->insert(
-            ['name'=>'F Service',
-            'description'=>'A web application that imitates popular food delivery services. It allows users to view restaurants, make orders and favourite dishes. Restaurants can create an account, display their items, receive orders, tick orders off with Create, Read, Update and Delete functionality on all dishes. ',
-            'images'=>'1,2,3,4,5,6',
-            'techs'=>'Business Analysis, UI Design, Full Stack Development (Laravel, Blade), SQL (SQLite)',
-            'status'=>'Completed July 23, currently down for maintenance and update',
-            'logo'=>'fsLogo.png'
-        ]);
         DB::table('posts')->insert(
             ['name'=>"Freeman's Mowing",
             'description'=>" I created Freeman's Mowing, a full-stack project for a local mowing business. It includes a user-friendly website using HTML, CSS, and jQuery for the front end. Email functionality connects with potential customers, and SEO boosts online visibility, demonstrating my end-to-end solutions for small businesses, merging tech skills with marketing to drive growth.",
@@ -78,5 +61,24 @@ class PostSeeder extends Seeder
             'techs'=>'HTML5 & SCSS, TypeScript, Angular, SQL (SQLite), REST APIs, Mobile Development, Git (Version Control), Canva (UI Design)',
             'status'=>'In Progress - Scheduled Release in 2024',
             'logo'=>'nomsterLogo.png']);
+            
+        DB::table('posts')->insert(
+            ['name'=>'Alcay',
+            'description'=>'A front-end demonstration (not functional) of a splash page that is used to grab the users attention and to follow the call to action, of getting in contact with Alcay. ',
+            'images'=>'1,2',
+            'techs'=>'UI Design, Front-End (React.js)',
+            'status'=>'Completed July 22',
+            'logo'=>'alcLogo1.PNG'
+        ]);
+
+        DB::table('posts')->insert(
+            ['name'=>'F Service',
+            'description'=>'A web application that imitates popular food delivery services. It allows users to view restaurants, make orders and favourite dishes. Restaurants can create an account, display their items, receive orders, tick orders off with Create, Read, Update and Delete functionality on all dishes. ',
+            'images'=>'1,2,3,4,5,6',
+            'url'=>'https://foodservice-mock.online/',
+            'techs'=>'Business Analysis, UI Design, Full Stack Development (Laravel, Blade), SQL (SQLite)',
+            'status'=>'Completed July 23',
+            'logo'=>'fsLogo.png'
+        ]);
     }
 }

@@ -105,27 +105,29 @@ HEADER BAR STYLING
     color: #00BBF9;
     background: rgb(40, 40, 40);
     transition: 0.5s ease-in-out;
+    padding-top:20px; 
 }
 #navBar.shrunken * {
     transition: 0.5s ease-in-out;
     scale: 0.825;
-    margin-top:-5px; 
+    
 }
 
 #navBar.shrunken {
-    height: 50px;
+    padding-top:7.5px; 
+    height: 45px;
     transition: 0.3s ease-in-out;
     box-shadow:0 0 30px #00BBF9; 
 }
 
 .nSec {
-    height:75px; 
+    transition: 0.5s ease-in-out;
+    height:45px; 
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 30%;
-    padding: 20px 0;
     font-size: 24px;
     transition: 0.3s ease-in-out;
 }
@@ -145,6 +147,8 @@ HEADER BAR STYLING
 
 .nTitle {
     width: 40%;
+    margin-top:-30px; 
+    scale:0.8; 
 }
 
 @keyframes spin {
@@ -751,7 +755,10 @@ MEDIA QUERIES
         animation: none !important;
         display: none;
     }
-
+    .subPulse {
+        animation:none !important; 
+        transition:none; 
+    }
     .subtitle h3 {
         font-size: 24px;
     }

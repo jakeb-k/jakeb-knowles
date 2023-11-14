@@ -77,7 +77,7 @@ Since then I have developed a large range of technical skills to become a full-s
         <input type="text" name="email" id="email" />
         <label for="note">MESSAGE:</label>
         <textarea name="note" id="note"></textarea>
-        <button class="submit" type="submit"><span>SUBMIT</span> <img id="subImg" src="{{url('images/penrose_blue.png')}}" /></button>
+        <button class="submit" type="submit"><span class="subPulse">SUBMIT</span> <img id="subImg" src="{{url('images/penrose_blue.png')}}" /></button>
     </form>
 </div>
 

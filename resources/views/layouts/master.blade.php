@@ -50,7 +50,7 @@
     <script>
          $(document).ready(function() {
             $(window).scroll(function() {
-                if ($(this).scrollTop() > 600) { // Adjust the scroll position as needed
+                if ($(this).scrollTop() > 50) { // Adjust the scroll position as needed
                     $('#navBar').addClass('shrunken');
                 } else {
                     $('#navBar').removeClass('shrunken');
