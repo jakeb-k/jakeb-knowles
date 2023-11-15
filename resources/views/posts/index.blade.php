@@ -260,7 +260,7 @@ Since then I have developed a large range of technical skills to become a full-s
   
     <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
+            <div class="modal-content"  style="scale:0.8;margin-top:-50px; font-size:108px; color:#00BBF9;background:none;">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
