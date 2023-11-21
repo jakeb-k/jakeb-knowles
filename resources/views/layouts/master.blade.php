@@ -59,20 +59,49 @@
             });  
     </script>
     <body>
-       
             <div id="navBar" class="">
                 <div class="nSec">
-                    <a class="about" href="">About</a>
-                    <a class="project" href="">Projects</a>
+                    
+                        <a class="about" href="">About</a>
+                    
+                    
+                        <a class="project" href="">Projects</a>
+                 
                 </div>
                 <div class="nTitle">
                     <h3><img src="{{url('images/penrose_blue.png')}}" /> </h3>
                 </div>
                 <div class="nSec">
-                    <a class="contact" href="">Contact</a>
-                    <a class="repo" href="https://github.com/jakeb-k">Repositories</a>
+                   
+                        <a class="contact" href="">Contact</a>
+                    
+                 
+                        <a class="repo" href="https://github.com/jakeb-k">Repositories</a>
+                   
                 </div>
             </div>
+            <!-- 
+            <div id="navBar" class="">
+                <div class="nSec">
+                    <div class="btn">
+                        <a class="about" href="">About</a>
+                    </div>
+                    <div class="btn">
+                        <a class="project" href="">Projects</a>
+                    </div>
+                </div>
+                <div class="nTitle">
+                    <h3><img src="{{url('images/penrose_blue.png')}}" /> </h3>
+                </div>
+                <div class="nSec">
+                    <div class="btn">
+                        <a class="contact" href="">Contact</a>
+                    </div>
+                    <div class="btn"> 
+                        <a class="repo" href="https://github.com/jakeb-k">Repositories</a>
+                    </div>
+                </div>
+            </div> --> 
        
         @yield('content')
         
