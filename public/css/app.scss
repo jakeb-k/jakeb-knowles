@@ -209,27 +209,37 @@ SPLASH PAGE STYLING
     background: none;
 }
 
-.nameTitle button h1 {
-
+.nameTitle  h1 {
     color: #00BBF9;
     text-align: center;
 }
 
-.subtitle h3 {
+.nameTitle h3 {
     font-family: 'Courier New', Courier, monospace;
     font-size: 32px;
-}
-
-.subtitle {
-    width: 90%;
-    margin: 0 5%;
-    background: rgb(40, 40, 40);
     color: #018cbe;
-    text-align: center;
-    padding: 20px;
-    align-self: center;
-    border-radius: 5px;
-
+}
+//FADE ANIMS
+.fade {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+  }
+  
+  .fade:nth-child(1) {
+    animation: fade-in .8s 2.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  .fade:nth-child(2) {
+    animation: fade-in .8s 2.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  .fade:nth-child(3) {
+    animation: fade-in .8s 2.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  @keyframes fade-in {
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
 }
 
 .nameTitle {
@@ -289,7 +299,7 @@ SPLASH PAGE STYLING
         transform: translateX(0%); /* Collide at the center */
         }
     80% {
-        transform: translateX(-15%); /* Bounce at the center */
+        transform: translateX(-5%); /* Bounce at the center */
 
     }
     100% {
@@ -311,7 +321,7 @@ SPLASH PAGE STYLING
         transform: translateX(0%); /* Collide at the center */
         }
     80% {
-        transform: translateX(15%); /* Bounce at the center */
+        transform: translateX(5%); /* Bounce at the center */
 
     }
     100% {

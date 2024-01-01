@@ -5,11 +5,19 @@
 <div id="splashContainer">
     <div class="profileContainer">
         <div class="nameTitle">
+            <h3 style="text-align:left">
+                <span class="fade">How's</span>
+                <span class="fade">its </span>
+                <span class="fade">Going?</span> 
+            </h3>
+            <h1> I'm Jakeb  </h1>
+            <h3> Let's make something great! </h3>
+            <button> Contact Now </button> 
         </div>
         <div class="profilePic">
-            <div class="coolBorder">
+            
             <img src="images/profile.jpg" />
-            </div>
+         
         </div>
     </div> 
 </div>
