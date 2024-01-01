@@ -11,52 +11,46 @@
         
         <link rel="stylesheet" href="{{asset('css/app.scss')}}" type="text/css">
         <link rel="canonical" href="https://jakebknowles.com" />
-       
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+       
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
        
     </head>
     <script>
-        $(function () {
-            $('.project') .click(function () {
-            $('html, body') .animate ({
-                scrollTop: $(".aContainer").offset().top + $(".aContainer")[0].scrollHeight
-                }, 1500);
-                return false;
-            })
-        });
-         $(function () {
-            $('.about') .click(function () {
-            $('html, body') .animate ({
-                scrollTop: $("#splashContainer").offset().top + $("#splashContainer")[0].scrollHeight
-                }, 1500);
-                return false;
-            })
-        });
-        $(function () {
-            $('.contact') .click(function () {
-            $('html, body') .animate ({
-                scrollTop: $(".sContainer").offset().top + $(".sContainer")[0].scrollHeight
-                }, 1500);
-                return false;
-            })
-        });
-    </script>
-    <script>
-         $(document).ready(function() {
-            $(window).scroll(function() {
-                if ($(this).scrollTop() > 50) { // Adjust the scroll position as needed
-                    $('#navBar').addClass('shrunken');
-                } else {
-                    $('#navBar').removeClass('shrunken');
-                }
-                });
-            });  
+$(function () {
+    $('.project, .about, .contact').click(function (e) {
+        e.preventDefault(); // Prevent the default anchor behavior
+
+        var target;
+        if ($(this).hasClass('project')) {
+            target = $(".sContainer");
+        } else if ($(this).hasClass('about')) {
+            target = $(".aContainer");
+        } else if ($(this).hasClass('contact')) {
+            target = $(".cContainer");
+        }
+
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1500);
+    });
+});
+
+$(document).ready(function() {
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) {
+            $('#navBar').addClass('shrunken');
+        } else {
+            $('#navBar').removeClass('shrunken');
+        }
+    });
+});
+
+
     </script>
     <body>
             <div id="navBar" class="">
@@ -80,28 +74,6 @@
                    
                 </div>
             </div>
-            <!-- 
-            <div id="navBar" class="">
-                <div class="nSec">
-                    <div class="btn">
-                        <a class="about" href="">About</a>
-                    </div>
-                    <div class="btn">
-                        <a class="project" href="">Projects</a>
-                    </div>
-                </div>
-                <div class="nTitle">
-                    <h3><img src="{{url('images/penrose_blue.png')}}" /> </h3>
-                </div>
-                <div class="nSec">
-                    <div class="btn">
-                        <a class="contact" href="">Contact</a>
-                    </div>
-                    <div class="btn"> 
-                        <a class="repo" href="https://github.com/jakeb-k">Repositories</a>
-                    </div>
-                </div>
-            </div> --> 
        
         @yield('content')
         
