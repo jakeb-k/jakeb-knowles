@@ -3,12 +3,15 @@
 
 @section('content')
 <div id="splashContainer">
-    <div class="nameTitle">
-        <button class="titleBtn"><h1> JAKEB KNOWLES</h1></button>
-        <div class="subtitle">
-            <h3>Full-Stack Developer <i>at your service</i></h3>
+    <div class="profileContainer">
+        <div class="nameTitle">
         </div>
-    </div>
+        <div class="profilePic">
+            <div class="coolBorder">
+            <img src="images/profile.jpg" />
+            </div>
+        </div>
+    </div> 
 </div>
 <div class="aContainer">
     <div class="aboutImg">
@@ -80,8 +83,18 @@ Since then I have developed a large range of technical skills to become a full-s
         <button class="submit" type="submit"><span class="subPulse">SUBMIT</span> <img id="subImg" src="{{url('images/penrose_blue.png')}}" /></button>
     </form>
 </div>
+<!-- FLY IN SCRIPT CONTROLLER -->
+<script>
+    const box1 = document.querySelector('.nameTitle');
+    const box2 = document.querySelector('.profilePic');
 
+    function startAnimation() {
+    box1.style.animation = 'flyInFromLeft 2s ease-in-out forwards';
+    box2.style.animation = 'flyInFromRight 2s ease-in-out forwards';
+    }
 
+    window.addEventListener('load', startAnimation);
+</script>
 
 
 

@@ -53,6 +53,7 @@ $(document).ready(function() {
 
     </script>
     <body>
+      
             <div id="navBar" class="">
                 <div class="nSec">
                     
