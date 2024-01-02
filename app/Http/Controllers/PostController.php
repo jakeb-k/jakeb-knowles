@@ -7,9 +7,15 @@ use Illuminate\Support\Facades\Mail;
 use App\Models\Contact; 
 use App\Models\Post;
 
+use Google\Cloud\RecaptchaEnterprise\V1\RecaptchaEnterpriseServiceClient;
+use Google\Cloud\RecaptchaEnterprise\V1\Event;
+use Google\Cloud\RecaptchaEnterprise\V1\Assessment;
+use Google\Cloud\RecaptchaEnterprise\V1\TokenProperties\InvalidReason;
+
 
 class PostController extends Controller
 {
+    
     /**
      * Display a listing of the resource.
      */
@@ -31,12 +37,14 @@ class PostController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+    
     public function store(Request $request)
     {
         $this->validate($request,[
             'name'=>'required|max:55',
             'email'=>'required|email',
-            'note'=>'required'
+            'note'=>'required',
+            'g-recaptcha-response' => 'required|captcha'
         ]);
         
         Contact::create($request->all()); 

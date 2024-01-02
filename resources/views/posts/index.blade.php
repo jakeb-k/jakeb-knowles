@@ -7,7 +7,7 @@
         <div class="nameTitle">
             <h3>
                 <span class="fade">How's</span>
-                <span class="fade">its </span>
+                <span class="fade">it </span>
                 <span class="fade">Going?</span> 
             </h3>
             <h1> 
@@ -104,7 +104,13 @@ Since then I have developed a large range of technical skills to become a full-s
         <input type="text" name="email" id="email" />
         <label for="note">MESSAGE:</label>
         <textarea name="note" id="note"></textarea>
-        <button class="submit" type="submit"><span class="subPulse">SUBMIT</span> <img id="subImg" src="{{url('images/penrose_blue.png')}}" /></button>
+        {!! NoCaptcha::display() !!}
+        @if ($errors->has('g-recaptcha-response'))
+            <span class="help-block">
+                <strong>The captcha field is required!</strong>
+            </span>
+        @endif
+        <button style="margin-top:40px;" class="submit" type="submit"><span class="subPulse">SUBMIT</span> <img id="subImg" src="{{url('images/penrose_blue.png')}}" /></button>
     </form>
 </div>
 <!-- FLY IN SCRIPT CONTROLLER -->
