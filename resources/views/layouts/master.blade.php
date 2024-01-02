@@ -24,7 +24,7 @@
     </head>
     <script>
 $(function () {
-    $('.project, .about, .contact').click(function (e) {
+    $('.project, .about, .contact, .btn').click(function (e) {
         e.preventDefault(); // Prevent the default anchor behavior
 
         var target;
@@ -32,7 +32,9 @@ $(function () {
             target = $(".sContainer");
         } else if ($(this).hasClass('about')) {
             target = $(".aContainer");
-        } else if ($(this).hasClass('contact')) {
+        } else if ($(this).hasClass('contact') ){
+            target = $(".cContainer");
+        }else if ($(this).hasClass('btn') ){
             target = $(".cContainer");
         }
 

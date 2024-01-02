@@ -88,7 +88,8 @@ HEADER BAR STYLING
 #navBar {
     position: fixed;
     top: 0;
-    width: 100%;
+    left:0; 
+    min-width: 100%;
     z-index: 4;
     display: flex;
     flex-direction: row;
@@ -121,6 +122,8 @@ HEADER BAR STYLING
     width: 30%;
     font-size: 24px;
     transition: 0.3s ease-in-out;
+    top: 0;
+    left:0; 
 }
 
 
@@ -746,9 +749,11 @@ label {
 
 input {
     padding: 10px;
-
 }
-
+input:focus {
+    outline:2px solid #00BBF9; 
+    border-radius:5px; 
+}
 #note {
     margin-bottom: 40px;
 }
@@ -895,7 +900,7 @@ MEDIA QUERIES
 
     #navBar,
     .footerBar {
-
+        transform: translateX(0);
         display: flex;
         justify-content: space-around;
     }
@@ -977,6 +982,36 @@ MEDIA QUERIES
     .w3-content {
         margin-top: 20px;
         scale: 1;
+    }
+    .profileContainer {
+        flex-direction:column-reverse;
+    }
+    .nameTitle {
+        width:95%;
+        margin:0; 
+        h1 {
+            font-size:22px;
+        }
+        h3 {
+            font-size:16px; 
+        }
+
+        .container {
+            scale:0.7; 
+            margin-left:-25px;  
+            
+        }
+        
+    }
+    .profilePic img{
+        height:250px; 
+        width:250px; 
+    }
+    .captcha {
+        scale:0.9; 
+        width:100%;
+        height:auto;
+        margin-left:-17.5px;  
     }
 }
 
