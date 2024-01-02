@@ -63,12 +63,13 @@ class PostSeeder extends Seeder
             'logo'=>'nomsterLogo.png']);
             
         DB::table('posts')->insert(
-            ['name'=>'Alcay',
-            'description'=>'A front-end demonstration (not functional) of a splash page that is used to grab the users attention and to follow the call to action, of getting in contact with Alcay. ',
-            'images'=>'1,2',
-            'techs'=>'UI Design, Front-End (React.js)',
-            'status'=>'Completed July 22',
-            'logo'=>'alcLogo1.PNG'
+            ['name'=>'Aussie PicklePro',
+            'description'=>"Aussie PicklePro, a Laravel-powered E-commerce Platform, offers a sophisticated and responsive online marketplace. Leveraging Laravel's robust framework, it seamlessly integrates innovative functionalities, ensuring a secure shopping experience for customers while streamlining administration.",
+            'images'=>'pickle1,pickle2,pickle3,pickle4,pickle5,pickle6,pickle7,pickle8',
+            'url'=>'https://aussiepicklepro.com.au/',
+            'techs'=>'Business Analysis, UI Design, Full Stack Development (Laravel, Blade, jQuery, SCSS), SQL (SQLite), SEO, Stripe',
+            'status'=>'Completed November 23',
+            'logo'=>'pickleLogo.png'
         ]);
 
         DB::table('posts')->insert(
