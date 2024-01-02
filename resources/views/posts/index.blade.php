@@ -5,14 +5,26 @@
 <div id="splashContainer">
     <div class="profileContainer">
         <div class="nameTitle">
-            <h3 style="text-align:left">
+            <h3>
                 <span class="fade">How's</span>
                 <span class="fade">its </span>
                 <span class="fade">Going?</span> 
             </h3>
-            <h1> I'm Jakeb  </h1>
-            <h3> Let's make something great! </h3>
-            <button> Contact Now </button> 
+            <h1> 
+                <span class="flash"> I'm </span>
+                <span class="flash">Jakeb  </span>
+            </h1>
+            <span class="fade3">
+                <div class="container">
+                    <div class="btn"><a href="#" >Contact Now!</a></div>
+                </div>
+            </span> 
+            <h3 style="margin-top:7%;"> 
+            <span class="fade2">Let's </span>
+            <span class="fade2">make </span>
+            <span class="fade2">something </span>
+            <span class="fade2">great! </span>
+            </h3>
         </div>
         <div class="profilePic">
             
@@ -21,6 +33,10 @@
         </div>
     </div> 
 </div>
+
+
+    
+    
 <div class="aContainer">
     <div class="aboutImg">
         <img src="images/jakey.jpg">
