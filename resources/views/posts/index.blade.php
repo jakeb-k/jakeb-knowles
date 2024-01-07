@@ -117,6 +117,7 @@ Since then I have developed a large range of technical skills to become a full-s
 </div>
 <!-- FLY IN SCRIPT CONTROLLER -->
 <script>
+$(document).ready(function() {
     const box1 = document.querySelector('.nameTitle');
     const box2 = document.querySelector('.profilePic');
 
@@ -126,6 +127,7 @@ Since then I have developed a large range of technical skills to become a full-s
     }
 
     window.addEventListener('load', startAnimation);
+}); 
 </script>
 
 
