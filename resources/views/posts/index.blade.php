@@ -118,16 +118,32 @@ Since then I have developed a large range of technical skills to become a full-s
 <!-- FLY IN SCRIPT CONTROLLER -->
 <script>
 $(document).ready(function() {
+    let flyInCompleted = false;
     const box1 = document.querySelector('.nameTitle');
     const box2 = document.querySelector('.profilePic');
 
     function startAnimation() {
-    box1.style.animation = 'flyInFromLeft 2s ease-in-out forwards';
-    box2.style.animation = 'flyInFromRight 2s ease-in-out forwards';
+        box1.style.animation = 'flyInFromLeft 2s ease-in-out forwards';
+        box2.style.animation = 'flyInFromRight 2s ease-in-out forwards';
+
+        setTimeout(() => {
+            flyInCompleted = true;
+            activateSCSSAnimations();
+        }, 2000); // assuming 'flyIn' takes 2 seconds
+    }
+
+    function activateSCSSAnimations() {
+        if (flyInCompleted) {
+            document.querySelectorAll('.fade, .fade2, .flash').forEach(el => {
+                // Trigger the CSS animations by reflow/repaint
+                el.style.animationPlayState = 'running';
+            });
+        }
     }
 
     window.addEventListener('load', startAnimation);
-}); 
+});
+
 </script>
 
 
