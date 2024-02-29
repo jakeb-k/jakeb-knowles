@@ -14,8 +14,22 @@
             <img src="https://simpleicons.org/icons/{{ $techSlug }}.svg" alt="{{ $tech }}" />
         @endforeach
     </div>
+    <div class="post-content">
+        <div class="post-desc">
+            <p>{{$post->description}}</p>
+        </div>
+
+        <div class="post-imgs"> 
+            <div class="images">
+            <!-- @for($i = 0; $i < $itemCount; $i++)   
+                <img class="mySlides6" src="{{url('images/'.$post->name.'/'.$i.'.PNG')}}" /> 
+            @endfor -->
+            </div>
+            <div class="container">
+                <div class="btn"><a href="{{$post->url}}" >View Project</a></div>
+            </div>
+        </div>
+
+    </div>
 </div>
 @endsection
-<!-- @for($i = 0; $i < $itemCount; $i++)   
-        <img class="mySlides6" src="{{url('images/'.$post->name.'/'.$i.'.PNG')}}" /> 
-    @endfor -->

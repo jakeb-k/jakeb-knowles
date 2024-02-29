@@ -836,7 +836,7 @@ POST DETAIL PAGE
     margin-top:50px !important;
     background:linear-gradient(rgb(83, 200, 244) 3.8%, rgb(36, 45, 123) 91.1%);
     padding:5%; 
-
+    height:100%; 
 }
 .post-header {
     display:flex;
@@ -851,6 +851,33 @@ POST DETAIL PAGE
         width:auto; 
         border:1px solid white; 
     }
+}
+.post-content {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    margin-top:50px; 
+}
+.post-desc {
+    font-size:22px;
+    font-family:'Courier New', Courier, monospace;
+    color:#018cbe;
+    background:rgb(40, 40, 40); 
+    width:47.5%;
+    padding:30px 25px;
+    border-radius:10px; 
+
+}
+.post-imgs {
+    width:47.5%;
+    height:auto; 
+    border:2px solid white; 
+    .images {
+        height:250px; 
+        width:100%; 
+        border:2px solid red; 
+    }
+
 }
 .post-techs {
     display:flex;
