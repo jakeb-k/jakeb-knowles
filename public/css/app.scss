@@ -879,6 +879,7 @@ POST DETAIL PAGE
     }
 
 }
+
 .post-techs {
     display:flex;
     flex-direction:row;
@@ -891,8 +892,37 @@ POST DETAIL PAGE
         margin-right:20px; 
     }
 }
-
-
+.tech-logo {
+    position: relative;
+    display: inline-block;
+    padding: 5px; /* Optional: adds some spacing around the logo */
+}
+  
+.tech-logo .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Positioning */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px; /* Offset by half the width to center it */
+  
+    /* Optional: Fade-in effect */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+  
+.tech-logo:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
 /*
 
 

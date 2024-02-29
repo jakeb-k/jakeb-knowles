@@ -11,7 +11,10 @@
             @php
             $techSlug = strtolower(str_replace('.js', 'js', $tech)); // Adjust the name to match Simple Icons slugs
             @endphp
-            <img src="https://simpleicons.org/icons/{{ $techSlug }}.svg" alt="{{ $tech }}" />
+            <div class="tech-logo" title="{{$tech}}">
+                <img src="https://simpleicons.org/icons/{{ $techSlug }}.svg" alt="{{ $tech }}" />
+                <span class="tooltip-text">{{$tech}}</span>
+            </div>
         @endforeach
     </div>
     <div class="post-content">
@@ -32,4 +35,6 @@
 
     </div>
 </div>
+<!--JAVASCRIPT TOOLTIP FUNCTION-->
+
 @endsection
