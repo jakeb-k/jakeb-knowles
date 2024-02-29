@@ -16,7 +16,7 @@ use App\Http\Controllers\PrivacyController;
 |
 */
 
-Route::resource('/', PostController::class);
-
+Route::resource('/project', PostController::class);
+Route::get('/', [PostController::class, 'index']);
 Route::post('/contact', [PostController::class, 'store']); 
 Route::get('/hahahubprivacy',[PrivacyController::class, 'hahahub']); 
