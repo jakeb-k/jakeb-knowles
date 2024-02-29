@@ -16,7 +16,7 @@ class PostSeeder extends Seeder
         DB::table('posts')->insert(
             ['name'=>'Mat-Mart',
             'description'=>'An E-commerce web application built with laravel, that sells different types of mats. It has an in-built Content Management System for the Orders placed and Mats. It has a payment system and is search engine optimized. Uses generic back-end types and code to enable expedited creation of e-commerce stores in the future. ',
-            'images'=>'1,2,3,4,5,6,7,8,9,10',
+            'images'=>'1,2,3,4,5,6,7,8,9,10,11',
             'url'=>'https://matmart.shop/',
             'techs'=>'Business Analysis, UI Design, Full Stack Development (Laravel, Blade), SQL (SQLite), SEO',
             'status'=>'Completed August 23',
@@ -67,7 +67,7 @@ class PostSeeder extends Seeder
             'description'=>"Aussie PicklePro, a Laravel-powered E-commerce Platform, offers a sophisticated and responsive online marketplace. Leveraging Laravel's robust framework, it seamlessly integrates innovative functionalities, ensuring a secure shopping experience for customers while streamlining administration.",
             'images'=>'pickle1,pickle2,pickle3,pickle4,pickle5,pickle6,pickle7,pickle8',
             'url'=>'https://aussiepicklepro.com.au/',
-            'techs'=>'Business Analysis, UI Design, Full Stack Development (Laravel, Blade, jQuery, SCSS), SQL (SQLite), SEO, Stripe',
+            'techs'=>'PHP,Laravel,jQuery,HTML5,SASS,SQLite,GitHub,Linux,Stripe,Hostinger,GoogleAnalytics',
             'status'=>'Completed November 23',
             'logo'=>'pickleLogo.png'
         ]);

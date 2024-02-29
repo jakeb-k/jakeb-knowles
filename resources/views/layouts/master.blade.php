@@ -21,6 +21,9 @@
        
         <script src='https://www.google.com/recaptcha/api.js' async defer></script>
 
+        
+        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
     </head>
     <script>
 $(function () {

@@ -816,6 +816,55 @@ input:focus {
     transition: 0.4s ease-in-out;
     transform: rotate(90deg) translate(0, -90px);
 }
+/*
+
+
+
+
+
+
+
+POST DETAIL PAGE
+
+
+
+
+
+
+*/
+.post-container {
+    margin-top:50px !important;
+    background:linear-gradient(rgb(83, 200, 244) 3.8%, rgb(36, 45, 123) 91.1%);
+    padding:5%; 
+
+}
+.post-header {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    text-wrap: nowrap;
+    font-family: 'Heritho', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    .container {
+        margin-left:auto; 
+        width:auto; 
+        border:1px solid white; 
+    }
+}
+.post-techs {
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: flex-start;
+   
+    img {
+        width:50px; 
+        height:auto; 
+        margin-right:20px; 
+    }
+}
+
 
 /*
 
