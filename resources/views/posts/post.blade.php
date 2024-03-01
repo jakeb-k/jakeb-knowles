@@ -45,6 +45,7 @@
 </div>
 <script>
     var slideIndex = 0;
+    var slideInterval; 
     showSlides();
 
     function setCurrentSlide(index) {
@@ -67,7 +68,8 @@
 
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
-        setTimeout(showSlides, 3000); // Change image every 3 seconds
+        clearTimeout(slideInterval);
+        slideInterval = setTimeout(showSlides, 3000);
     }
 </script>
 @endsection
