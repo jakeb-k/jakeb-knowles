@@ -18,7 +18,7 @@ class PostSeeder extends Seeder
             'description'=>'An E-commerce web application built with laravel, that sells different types of mats. It has an in-built Content Management System for the Orders placed and Mats. It has a payment system and is search engine optimized. Uses generic back-end types and code to enable expedited creation of e-commerce stores in the future. ',
             'images'=>'1,2,3,4,5,6,7,8,9,10,11',
             'url'=>'https://matmart.shop/',
-            'techs'=>'Business Analysis, UI Design, Full Stack Development (Laravel, Blade), SQL (SQLite), SEO',
+            'techs'=>'PHP,Laravel,jQuery,HTML5,SASS,SQLite,GitHub,Linux,Stripe,Hostinger,GoogleAnalytics',
             'status'=>'Completed August 23',
             'logo'=>'mmLogo.png']);
 
@@ -47,10 +47,10 @@ class PostSeeder extends Seeder
             'logo'=>'japresLogo.png'
         ]);
         DB::table('posts')->insert(
-            ['name'=>"Freeman's Mowing",
-            'description'=>" I created Freeman's Mowing, a full-stack project for a local mowing business. It includes a user-friendly website using HTML, CSS, and jQuery for the front end. Email functionality connects with potential customers, and SEO boosts online visibility, demonstrating my end-to-end solutions for small businesses, merging tech skills with marketing to drive growth.",
+            ['name'=>"Freemans Lawns",
+            'description'=>" I created Freeman's Lawns, a full-stack project for a local mowing business. It includes a user-friendly website using HTML, CSS, and jQuery for the front end. Email functionality connects with potential customers, and SEO boosts online visibility, demonstrating my end-to-end solutions for small businesses, merging tech skills with marketing to drive growth.",
             'images'=>'1,2,3,4,5,6,7,8,9,10',
-            'techs'=>'HTML5 & SCSS, jQuery, JavaScript, PHP - Laravel (Backend), SQLite, SEO, SMTP Config, Web Hosting (SSH), Git (Version Control), Canva (UI Design)',
+            'techs'=>'PHP,Laravel,jQuery,HTML5,SASS,SQLite,GitHub,Linux,GoogleAnalytics,WordPress',
             'status'=>'Final Touches - Release in 1-2 weeks',
             'logo'=>'freemanLogo.jpg']);
 
