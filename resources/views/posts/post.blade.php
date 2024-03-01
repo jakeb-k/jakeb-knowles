@@ -11,7 +11,7 @@
             @php
             $techSlug = strtolower(str_replace('.js', 'js', $tech)); // Adjust the name to match Simple Icons slugs
             @endphp
-            <div class="tech-logo" title="{{$tech}}">
+            <div class="tech-logo">
                 <img src="https://simpleicons.org/icons/{{ $techSlug }}.svg" alt="{{ $tech }}" />
                 <span class="tooltip-text">{{$tech}}</span>
             </div>
@@ -20,21 +20,54 @@
     <div class="post-content">
         <div class="post-desc">
             <p>{{$post->description}}</p>
-        </div>
-
-        <div class="post-imgs"> 
-            <div class="images">
-            <!-- @for($i = 0; $i < $itemCount; $i++)   
-                <img class="mySlides6" src="{{url('images/'.$post->name.'/'.$i.'.PNG')}}" /> 
-            @endfor -->
-            </div>
             <div class="container">
                 <div class="btn"><a href="{{$post->url}}" >View Project</a></div>
             </div>
         </div>
 
+        <div class="post-imgs"> 
+            
+                @for($i = 0; $i < $itemCount; $i++)   
+                    <img class="post-img-slide" src="{{url('images/'.$post->name.'/'.$i.'.PNG')}}" style="{{ $i == 0 ? 'display: block;' : 'display: none;' }}" />
+                @endfor
+                <div class="navigation">
+                    @for($i = 0; $i < $itemCount; $i++)   
+                        <span class="nav-circle" onclick="setCurrentSlide({{ $i }})"></span>
+                    @endfor
+                </div>
+          
+            
+        </div>
+
+        
+
     </div>
 </div>
-<!--JAVASCRIPT TOOLTIP FUNCTION-->
+<script>
+    var slideIndex = 0;
+    showSlides();
 
+    function setCurrentSlide(index) {
+        slideIndex = index;
+        showSlides();
+    }
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("post-img-slide");
+        var dots = document.getElementsByClassName("nav-circle");
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+</script>
 @endsection
