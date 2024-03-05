@@ -15,9 +15,9 @@
                 <span class="flash">Jakeb  </span>
             </h1>
             <span class="fade3">
-                <div class="container">
-                    <div class="btn"><a href="#" >Contact Now!</a></div>
-                </div>
+                 <div class="cta-cont">
+                <a class="cta-btn" href="#">Contact Now!</a>
+            </div>
             </span> 
             <h3 style="margin-top:7%;"> 
             <span class="fade2">Let's </span>

@@ -29,7 +29,7 @@
         <div class="post-imgs"> 
             
                 @for($i = 0; $i < $itemCount; $i++)   
-                    <img class="post-img-slide" src="{{url('images/'.$post->name.'/'.$i.'.PNG')}}" style="{{ $i == 0 ? 'display: block;' : 'display: none;' }}" />
+                    <img class="post-img-slide" src="{{url('images/'.$post->name.'/web/'.$i.'.PNG')}}" style="{{ $i == 0 ? 'display: block;' : 'display: none;' }}" />
                 @endfor
                 <div class="navigation">
                     @for($i = 0; $i < $itemCount; $i++)   

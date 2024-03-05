@@ -27,7 +27,7 @@
     </head>
     <script>
 $(function () {
-    $('.project, .about, .contact, .btn').click(function (e) {
+    $('.project, .about, .contact, .cta-btn').click(function (e) {
         e.preventDefault(); // Prevent the default anchor behavior
 
         var target;
@@ -37,7 +37,7 @@ $(function () {
             target = $(".aContainer");
         } else if ($(this).hasClass('contact') ){
             target = $(".cContainer");
-        }else if ($(this).hasClass('btn') ){
+        }else if ($(this).hasClass('cta-btn') ){
             target = $(".cContainer");
         }
 

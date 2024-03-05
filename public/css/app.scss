@@ -2,17 +2,7 @@
 @import url('https://fonts.cdnfonts.com/css/heritho');
 
 @import url('https://fonts.googleapis.com/css?family=Bebas+Neue:400,700&display=swap');
-// Source Code Pro
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
 
-// Roboto Mono
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
-
-// Inconsolata
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
-
-// PT Mono
-@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
 /*
 
 GENERAL
@@ -227,9 +217,12 @@ SPLASH PAGE STYLING
 
 */
 .nameTitle h1 {
-    font-family: 'Heritho';
+    font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #00BBF9;
-    font-size: 60px;
+    font-size: 50px;
+    letter-spacing: 1px;
+    text-align: center;
+
 }
 
 .nameTitle button {
@@ -237,15 +230,11 @@ SPLASH PAGE STYLING
     background: none;
 }
 
-.nameTitle  h1 {
-    color: #00BBF9;
-    text-align: center;
-}
 
 .nameTitle h3 {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 32px;
-    color: #018cbe;
+    font-family: monospace;
+    font-size: 26px;
+    color: #00BBF9;
 }
 //CONTACT GLASS BUTTON CSS
 .container {
@@ -906,7 +895,8 @@ a.cta-btn:hover {
 }
 
 .post-desc {
-    
+    font-size:18px;
+    font-family:'PT Mono',monospace;
     color:#E5E7EB;
     background:rgb(40, 40, 40); 
     width:42.5%;
@@ -916,8 +906,7 @@ a.cta-btn:hover {
     border:2.5px solid #0061c2;
     p {
         margin-bottom:50px; 
-        font-size:18px;
-        font-family: 'Roboto Mono', monospace;
+       
     }
 
 }

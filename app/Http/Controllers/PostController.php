@@ -58,7 +58,7 @@ class PostController extends Controller
     public function show(string $name)
     {
         $post = Post::where('name', $name)->first();
-        $items = scandir(public_path('images/'.$name));
+        $items = scandir(public_path('images/'.$name.'/web'));
         $itemCount = count($items) - 2;
 
         return view('posts.post')->with('post',$post)->with('itemCount', $itemCount);
