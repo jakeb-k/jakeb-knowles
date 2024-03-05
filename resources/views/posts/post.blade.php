@@ -27,15 +27,18 @@
         </div>
 
         <div class="post-imgs"> 
+            <img class="post-mob-slide" src="{{url('images/'.$post->name.'/mobile/1.PNG')}}" style="display:block;"/>
             
-                @for($i = 0; $i < $itemCount; $i++)   
+            <!-- <img class="post-web-slide" src="{{url('images/'.$post->name.'/web/1.PNG')}}" style="display:block;"/> -->
+            
+                <!-- @for($i = 0; $i < $itemCount; $i++)   
                     <img class="post-img-slide" src="{{url('images/'.$post->name.'/web/'.$i.'.PNG')}}" style="{{ $i == 0 ? 'display: block;' : 'display: none;' }}" />
                 @endfor
                 <div class="navigation">
                     @for($i = 0; $i < $itemCount; $i++)   
                         <span class="nav-circle" onclick="setCurrentSlide({{ $i }})"></span>
                     @endfor
-                </div>
+                </div> -->
           
             
         </div>
@@ -45,7 +48,7 @@
     </div>
 </div>
 
-
+<!-- 
 <script>
     var slideIndex = 0;
     var slideInterval; 
@@ -74,5 +77,5 @@
         clearTimeout(slideInterval);
         slideInterval = setTimeout(showSlides, 3000);
     }
-</script>
+</script> -->
 @endsection

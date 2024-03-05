@@ -900,6 +900,7 @@ a.cta-btn:hover {
     color:#E5E7EB;
     background:rgb(40, 40, 40); 
     width:42.5%;
+    height:400px; 
     padding:30px 25px;
     border-radius:10px; 
     text-align:left;
@@ -909,9 +910,6 @@ a.cta-btn:hover {
        
     }
 
-}
-.post-imgs {
-    width:47.5%;
 }
 
 .post-techs {
@@ -964,11 +962,23 @@ a.cta-btn:hover {
     visibility: visible;
     opacity: 1;
 }
-.post-img-slide {
-    width: 100%;
+.post-imgs img {
+
     display: none;
     border-radius:10px; 
-    box-shadow:0 8px 12px rgb(89, 89, 89);  
+    box-shadow:0 8px 12px rgb(89, 89, 89); 
+}
+.post-mob-slide {
+    width:30%; 
+    height:auto; 
+    margin:0 auto;
+    border:2px solid black;  
+}
+.post-web-slide {
+    width:100%; 
+}
+.post-imgs {
+    width:47.5%;
 }
 
 .nav-circle {
