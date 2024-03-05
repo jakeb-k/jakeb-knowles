@@ -77,7 +77,7 @@ class PostSeeder extends Seeder
             'description'=>'A web application that imitates popular food delivery services. It allows users to view restaurants, make orders and favourite dishes. Restaurants can create an account, display their items, receive orders, tick orders off with Create, Read, Update and Delete functionality on all dishes. ',
             'images'=>'1,2,3,4,5,6',
             'url'=>'https://foodservice-mock.online/',
-            'techs'=>'Business Analysis, UI Design, Full Stack Development (Laravel, Blade), SQL (SQLite)',
+            'techs'=>'PHP,Laravel,jQuery,HTML5,SASS,SQLite,GitHub,Linux',
             'status'=>'Completed July 23',
             'logo'=>'fsLogo.png'
         ]);
