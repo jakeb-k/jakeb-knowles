@@ -20,9 +20,10 @@
     <div class="post-content">
         <div class="post-desc">
             <p>{{$post->description}}</p>
-            <div class="container">
-                <div class="btn"><a href="{{$post->url}}" >View Project</a></div>
+            <div class="cta-cont">
+                <a class="cta-btn" href="{{$post->url}}">View Project</a>
             </div>
+         
         </div>
 
         <div class="post-imgs"> 
@@ -43,6 +44,8 @@
 
     </div>
 </div>
+
+
 <script>
     var slideIndex = 0;
     var slideInterval; 
