@@ -834,7 +834,7 @@ POST DETAIL PAGE
 */
 .post-container {
     margin-top:50px !important;
-    background:linear-gradient(rgb(83, 200, 244) 3.8%, rgb(36, 45, 123) 91.1%);
+    background:linear-gradient(to bottom, #B3E5FC 0%, #0288D1 50%, #01579B 100%);;
     padding:5%; 
     height:100%; 
 }
@@ -875,14 +875,21 @@ POST DETAIL PAGE
     align-items: center;
     justify-content: flex-start;
     img {
-        width:50px; 
-        margin-right:20px; 
+        width:40px; 
+        
     }
+}
+.logo {
+    filter: invert(100%);
 }
 .tech-logo {
     position: relative;
     display: inline-block;
-    padding: 5px; /* Optional: adds some spacing around the logo */
+    padding: 20px;
+    background:#003366;
+    border-radius:100%;
+    margin:0 10px; 
+
 }
   
 .tech-logo .tooltip-text {

@@ -12,7 +12,7 @@
             $techSlug = strtolower(str_replace('.js', 'js', $tech)); // Adjust the name to match Simple Icons slugs
             @endphp
             <div class="tech-logo">
-                <img src="https://simpleicons.org/icons/{{ $techSlug }}.svg" alt="{{ $tech }}" />
+                <img class="logo" src="https://simpleicons.org/icons/{{ $techSlug }}.svg" alt="{{ $tech }}" />
                 <span class="tooltip-text">{{$tech}}</span>
             </div>
         @endforeach
