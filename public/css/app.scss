@@ -2,7 +2,17 @@
 @import url('https://fonts.cdnfonts.com/css/heritho');
 
 @import url('https://fonts.googleapis.com/css?family=Bebas+Neue:400,700&display=swap');
+// Source Code Pro
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
 
+// Roboto Mono
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+// Inconsolata
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
+
+// PT Mono
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
 /*
 
 GENERAL
@@ -852,7 +862,7 @@ a.cta-btn {
     position:absolute; 
     color:#0061c2; 
     font-family:'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size:22px; 
+    font-size:26px; 
     letter-spacing: 1px;
     border-radius:15px;
 
@@ -894,17 +904,20 @@ a.cta-btn:hover {
     justify-content: space-evenly;
     margin-top:50px; 
 }
+
 .post-desc {
-    font-size:18px;
-    font-family:'Courier New', Courier, monospace;
-    color:#00BBF9;
+    
+    color:#E5E7EB;
     background:rgb(40, 40, 40); 
     width:42.5%;
     padding:30px 25px;
     border-radius:10px; 
     text-align:left;
+    border:2.5px solid #0061c2;
     p {
         margin-bottom:50px; 
+        font-size:18px;
+        font-family: 'Roboto Mono', monospace;
     }
 
 }
@@ -933,7 +946,7 @@ a.cta-btn:hover {
     background:#003366;
     border-radius:35%;
     margin:0 10px; 
-    box-shadow:0 0 10px #003366;
+    box-shadow:0 0 10px #0061c2;
 
 }
   
