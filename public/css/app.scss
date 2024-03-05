@@ -931,20 +931,21 @@ POST DETAIL PAGE
     width: 100%;
     display: none;
     border-radius:10px; 
+    box-shadow:0 8px 12px rgb(89, 89, 89);  
 }
 
 .nav-circle {
     height: 15px;
     width: 15px;
     margin: 5px;
-    background-color: #bbb;
+    background-color: #30beed;
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
 }
 
 .nav-circle.active {
-    background-color: #717171;
+    background-color: #006489;
 }
 .navigation {
     display:flex;
