@@ -64,6 +64,7 @@ class PostController extends Controller
         return view('posts.post')->with('post',$post)->with('itemCount', $itemCount);
     }
 
+    
     /**
      * Show the form for editing the specified resource.
      */

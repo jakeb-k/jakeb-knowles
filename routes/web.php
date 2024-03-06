@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PrivacyController;
 
+use Illuminate\Support\Facades\Session;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,10 @@ Route::resource('/project', PostController::class);
 Route::get('/', [PostController::class, 'index']);
 Route::post('/contact', [PostController::class, 'store']); 
 Route::get('/hahahubprivacy',[PrivacyController::class, 'hahahub']); 
+
+Route::get('/toggle-view-mode', function () {
+    $currentMode = Session::get('viewMode', 'web'); // Default to web
+    $newMode = $currentMode === 'web' ? 'mobile' : 'web';
+    Session::put('viewMode', $newMode);
+    return back();
+})->name('toggleViewMode');

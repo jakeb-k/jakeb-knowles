@@ -28,20 +28,34 @@
 
         <div class="post-imgs"> 
 
-            <img class="post-mob-slide" src="{{url('images/'.$post->name.'/mobile/1.PNG')}}" />
-            
-            <img class="post-web-slide" src="{{url('images/'.$post->name.'/web/1.PNG')}}" />
-            
-            <button class="swap-btn" onclick="swapView()">SWAP</button>
-                <!-- @for($i = 0; $i < $itemCount; $i++)   
-                    <img class="post-img-slide" src="{{url('images/'.$post->name.'/web/'.$i.'.PNG')}}" style="{{ $i == 0 ? 'display: block;' : 'display: none;' }}" />
+        
+            @if (Session::get('viewMode') == 'web')
+                @for($i = 0; $i < $itemCount; $i++) 
+                <div class="web-view resizing"  >
+                    <img class="post-img-slide" src="{{url('images/'.$post->name.'/web/'.$i.'.PNG')}}" />
+                </div>  
                 @endfor
                 <div class="navigation">
                     @for($i = 0; $i < $itemCount; $i++)   
                         <span class="nav-circle" onclick="setCurrentSlide({{ $i }})"></span>
                     @endfor
-                </div> -->
-          
+                </div>
+            @else
+                @for($i = 0; $i < $itemCount; $i++)  
+                    <div class="mob-view resizing" >
+                        <img class="post-img-slide" src="{{url('images/'.$post->name.'/mobile/'.$i.'.PNG')}}"  style="{{ $i == 0 ? 'display: block;' : 'display: none;' }}" />
+                    </div> 
+                @endfor
+                <div class="navigation">
+                    @for($i = 0; $i < $itemCount; $i++)   
+                        <span class="nav-circle" onclick="setCurrentSlide({{ $i }})"></span>
+                    @endfor
+                </div>
+            @endif
+            <a href="{{ route('toggleViewMode') }}" class="btn btn-primary">Swap View</a>
+
+
+               
             
         </div>
 
@@ -52,49 +66,34 @@
 
 
 <script>
-    // var slideIndex = 0;
-    // var slideInterval; 
-    // showSlides();
+    var slideIndex = 0;
+    var slideInterval; 
+    showSlides();
 
-    // function setCurrentSlide(index) {
-    //     slideIndex = index;
-    //     showSlides();
-    // }
-
-    // function showSlides() {
-    //     var i;
-    //     var slides = document.getElementsByClassName("post-img-slide");
-    //     var dots = document.getElementsByClassName("nav-circle");
-
-    //     for (i = 0; i < slides.length; i++) {
-    //         slides[i].style.display = "none";
-    //         dots[i].className = dots[i].className.replace(" active", "");
-    //     }
-
-    //     slideIndex++;
-    //     if (slideIndex > slides.length) { slideIndex = 1 }
-
-    //     slides[slideIndex - 1].style.display = "block";
-    //     dots[slideIndex - 1].className += " active";
-    //     clearTimeout(slideInterval);
-    //     slideInterval = setTimeout(showSlides, 3000);
-    // }
-
-    var viewCond = true;
-    swapView(); 
-    function swapView(){
-    var mobileView = $(".post-mob-slide");
-    var webView = $(".post-web-slide");
-
-    if(viewCond) {
-        mobileView.css('display', 'none');
-        webView.css('display', 'block');
-    } else {
-        mobileView.css('display', 'block');
-        webView.css('display', 'none');
+    function setCurrentSlide(index) {
+        slideIndex = index;
+        showSlides();
     }
-    
-    viewCond = !viewCond;
-}
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("post-img-slide");
+        var dots = document.getElementsByClassName("nav-circle");
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        clearTimeout(slideInterval);
+        slideInterval = setTimeout(showSlides, 3000);
+    }
+
+
 </script>
 @endsection
