@@ -26,60 +26,69 @@
 
     </head>
     <script>
-$(function () {
-    $('.project, .about, .contact, .cta-btn').click(function (e) {
-        e.preventDefault(); // Prevent the default anchor behavior
+    $(function () {
+        $('.project, .about, .contact, .cta-btn').click(function (e) {
+            e.preventDefault(); // Prevent the default anchor behavior
 
-        var target;
-        if ($(this).hasClass('project')) {
-            target = $(".sContainer");
-        } else if ($(this).hasClass('about')) {
-            target = $(".aContainer");
-        } else if ($(this).hasClass('contact') ){
-            target = $(".cContainer");
-        }else if ($(this).hasClass('cta-btn') ){
-            target = $(".cContainer");
-        }
+            var target;
+            if ($(this).hasClass('project')) {
+                target = $(".sContainer");
+            } else if ($(this).hasClass('about')) {
+                target = $(".aContainer");
+            } else if ($(this).hasClass('contact') ){
+                target = $(".cContainer");
+            }else if ($(this).hasClass('cta-btn') ){
+                target = $(".cContainer");
+            }
 
-        $('html, body').stop().animate({
-            scrollTop: target.offset().top
-        }, 1500);
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top
+            }, 1500);
+        });
     });
-});
 
-$(document).ready(function() {
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 50) {
-            $('#navBar').addClass('shrunken');
-        } else {
-            $('#navBar').removeClass('shrunken');
-        }
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 50) {
+                $('#navBar').addClass('shrunken');
+            } else {
+                $('#navBar').removeClass('shrunken');
+            }
+        });
     });
-});
-
-
     </script>
     <body>
-      
-            <div id="navBar" class="">
+        <!-- <div id="navBar">
                 <div class="nSec">
-                    
-                        <a class="about" href="">About</a>
-                    
-                    
-                        <a class="project" href="">Projects</a>
-                 
+                    <a class="about" href="">About</a>
+                    <a class="project" href="">Projects</a>
                 </div>
                 <div class="nTitle">
                     <h3><img src="{{url('images/penrose_blue.png')}}" /> </h3>
                 </div>
                 <div class="nSec">
-                   
-                        <a class="contact" href="">Contact</a>
+                    <a class="contact" href="">Contact</a>
+                    <a class="repo" href="https://github.com/jakeb-k">Repositories</a>
+                </div>
+            </div> -->
+
+            <div class="nav-bar">
+                <div class="nav-name">
+                    <h1>Jakeb Knowles</h1>
+                </div>
+                <div class="nav-links">
+                    <a class="contact" href="">Contact</a>
+                    <a class="about" href="">About</a>
+                    <a class="project" href="">Projects</a>
+                </div>
+                <div class="nav-icons">
                     
-                 
-                        <a class="repo" href="https://github.com/jakeb-k">Repositories</a>
-                   
+                        <img class="svg-icons" src="{{url('images/icons/linkedin.svg')}}"  />
+                        <img class="svg-icons" src="{{url('images/icons/github.svg')}}"  />
+                    
+                        <img class="svg-icons" src="{{url('images/icons/stackoverflow.svg')}}"  />
+                        <img class="svg-icons" src="{{url('images/icons/vimeo.svg')}}"  /> 
+                    
                 </div>
             </div>
        
