@@ -839,7 +839,7 @@ POST DETAIL PAGE
     height: 75px; /* Example height */
     width: 100%; /* Example width */
 }
-a.cta-btn {
+a.cta-btn, a.cta-btn2 {
     background-color:#E5E7EB ;
     text-align: center;
     box-shadow:12px 12px 0 #0061c2;
@@ -861,7 +861,7 @@ a.cta-btn {
     bottom: 0;
     margin: auto;
 }
-a.cta-btn:hover {
+a.cta-btn:hover, a.cta-btn2:hover {
    
     transform: translate(12px, 12px);
     box-shadow:-12px -12px 0 #E5E7EB ; 

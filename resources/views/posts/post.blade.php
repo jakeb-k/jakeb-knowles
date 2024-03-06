@@ -21,7 +21,7 @@
         <div class="post-desc">
             <p>{{$post->description}}</p>
             <div class="cta-cont">
-                <a class="cta-btn" href="{{$post->url}}">View Project</a>
+                <a class="cta-btn2" href="{{$post->url}}">View Project</a>
             </div>
          
         </div>
