@@ -56,22 +56,32 @@
             }
         });
     });
+
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 50) {
+                $('.nav-bar').addClass('shrunken');
+            } else {
+                $('.nav-bar').removeClass('shrunken');
+            }
+        });
+    });
     </script>
     <body>
-        <!-- <div id="navBar">
+        <div id="navBar">
                 <div class="nSec">
                     <a class="about" href="">About</a>
                     <a class="project" href="">Projects</a>
                 </div>
                 <div class="nTitle">
-                    <h3><img src="{{url('images/penrose_blue.png')}}" /> </h3>
+                    <h3>Jakeb <br> Knowles</h3>
                 </div>
                 <div class="nSec">
                     <a class="contact" href="">Contact</a>
                     <a class="repo" href="https://github.com/jakeb-k">Repositories</a>
                 </div>
-            </div> -->
-
+            </div>
+<!-- 
             <div class="nav-bar">
                 <div class="nav-name">
                     <h1>Jakeb Knowles</h1>
@@ -90,7 +100,7 @@
                         <img class="svg-icons" src="{{url('images/icons/vimeo.svg')}}"  /> 
                     
                 </div>
-            </div>
+            </div> -->
        
         @yield('content')
 
