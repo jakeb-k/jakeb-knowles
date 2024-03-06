@@ -995,6 +995,34 @@ a.cta-btn:hover, a.cta-btn2:hover {
 }
 .web-view img{
     width:100%; 
+    border: 8px solid rgb(40, 40, 40); /* Dark border for the monitor */
+    border-bottom-width: 20px; /* Thicker bottom to mimic a monitor's chin */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.web-view::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    width: 4%;
+    height: 20px;
+    background: rgb(40, 40, 40);
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.web-view::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    width: 20%;
+    height: 20px;
+    background: rgb(40, 40, 40);
+    transform: translateX(-50%);
+    border-radius: 5px;
 }
 .post-imgs {
     width:47.5%;
@@ -1021,7 +1049,7 @@ a.cta-btn:hover, a.cta-btn2:hover {
     display:flex;
     flex-direction:row;
     justify-content: center;
-    margin-top:25px; 
+    margin-top:10%; 
 }
 
 /*
