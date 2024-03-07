@@ -74,7 +74,7 @@
                     <a class="project" href="">Projects</a>
                 </div>
                 <div class="nTitle">
-                    <h3>Jakeb <br> Knowles</h3>
+                    <h3><img src="{{url('images/penrose_blue.png')}}" /> </h3>
                 </div>
                 <div class="nSec">
                     <a class="contact" href="">Contact</a>

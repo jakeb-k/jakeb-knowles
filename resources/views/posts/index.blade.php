@@ -146,7 +146,7 @@ $(document).ready(function() {
 
 </script>
 
-
+<!-- 
 
     {{-- MODAL 0 START HERE--}}
   
@@ -444,7 +444,7 @@ $(document).ready(function() {
 
     
 
-    {{-- MODAL 6 END HERE --}}
+    {{-- MODAL 6 END HERE --}} -->
 
 
 @endsection
