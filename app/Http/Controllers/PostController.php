@@ -58,10 +58,31 @@ class PostController extends Controller
     public function show(string $name)
     {
         $post = Post::where('name', $name)->first();
-        $items = scandir(public_path('images/'.$name.'/web'));
+
+        // Check directories for web and mobile
+        $webPath = public_path('images/'.$name.'/web');
+        $mobilePath = public_path('images/'.$name.'/mobile');
+
+        $webExists = is_dir($webPath) && count(scandir($webPath)) > 2;
+        $mobileExists = is_dir($mobilePath) && count(scandir($mobilePath)) > 2;
+
+        // Determine the view mode based on the available directories
+        if ($webExists && !$mobileExists) {
+            $viewMode = 'web';
+        } elseif (!$webExists && $mobileExists) {
+            $viewMode = 'mobile';
+        } else {
+            // Default to web if both exist or neither exists
+            $viewMode = 'web';
+        }
+
+        // You can store this $viewMode in session or pass directly to the view
+        session(['viewMode' => $viewMode]);
+
+        $items = scandir(public_path('images/'.$name.'/'.$viewMode));
         $itemCount = count($items) - 2;
 
-        return view('posts.post')->with('post',$post)->with('itemCount', $itemCount);
+        return view('posts.post')->with('post', $post)->with('itemCount', $itemCount)->with('viewMode', $viewMode);
     }
 
     
