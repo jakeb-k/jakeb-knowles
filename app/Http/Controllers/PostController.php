@@ -73,16 +73,15 @@ class PostController extends Controller
             $viewMode = 'mobile';
         } else {
             // Default to web if both exist or neither exists
-            $viewMode = 'web';
+            $viewMode = 'mobile';
         }
 
-        // You can store this $viewMode in session or pass directly to the view
-        session(['viewMode' => $viewMode]);
+      
 
         $items = scandir(public_path('images/'.$name.'/'.$viewMode));
         $itemCount = count($items) - 2;
 
-        return view('posts.post')->with('post', $post)->with('itemCount', $itemCount)->with('viewMode', $viewMode);
+        return view('posts.post')->with('post', $post)->with('itemCount', $itemCount)->with('webExists', $webExists);
     }
 
     

@@ -26,6 +26,7 @@ class PostSeeder extends Seeder
             ['name'=>'HaHa Hub',
             'description'=>'A joke generator app, built with angular/ionic. Pick a category and get a related joke. This app is monetized through google AdMob and uses a free API to produce jokes. ',
             'images'=>'1,2',
+            'url'=>'https://play.google.com/store/apps/details?id=com.ionic.hahahub&pli=1',
             'techs'=>'HTML5,SASS,Ionic,TypeScript,Angular,GitHub,AndroidStudio,GoogleAds',
             'status'=>'Completed September 23 - Available on the Google Play Store',
             'logo'=>'hahaLogo.png']);
@@ -42,6 +43,7 @@ class PostSeeder extends Seeder
                 aspects of development, set and met deadlines, delegated tasks,
                 and crafted engaging games for effective language learning",
             'images'=>'1,2,3,4,5,6,7,8,9',
+            'url'=>'https://vimeo.com/899423632?share=copy',
             'techs'=>'HTML5,SASS,Ionic,TypeScript,Angular,GitHub,AndroidStudio,Trello',
             'status'=>'Completed October 23',
             'logo'=>'japresLogo.png'
@@ -50,6 +52,7 @@ class PostSeeder extends Seeder
             ['name'=>"Freemans Lawns",
             'description'=>" I created Freeman's Lawns, a full-stack project for a local mowing business. It includes a user-friendly website using HTML, CSS, and jQuery for the front end. Email functionality connects with potential customers, and SEO boosts online visibility, demonstrating my end-to-end solutions for small businesses, merging tech skills with marketing to drive growth.",
             'images'=>'1,2,3,4,5,6,7,8,9,10',
+            'url'=>'https://vimeo.com/899431114?share=copy',
             'techs'=>'PHP,Laravel,jQuery,HTML5,SASS,SQLite,GitHub,Linux,GoogleAnalytics,WordPress',
             'status'=>'Completed January 24',
             'logo'=>'freemanLogo.jpg']);
@@ -58,6 +61,7 @@ class PostSeeder extends Seeder
             ['name'=>"Nomster",
             'description'=>"Nomster is a new personal project I have created. It utilises the Spoonacular API's to provide an indepth recipe search using macro nutrients, cuisine, ingredients to name a few. It will have a user account feature to enable users to track their nutrients, be given tailored recipe content and to create a user review system to empower users further. Working on this over the summer with a good friend and am very excited about the potential this app has!",
             'images'=>'nomster1,nomster2,nomster3,nomster4,nomster5,nomster6,nomster7',
+            'url'=>'https://github.com/jakeb-k/nomster',
             'techs'=>'HTML5,SASS,Ionic,TypeScript,Angular,SQLite,GitHub,AndroidStudio',
             'status'=>'In Progress - Scheduled Release in 2024',
             'logo'=>'nomsterLogo.png']);

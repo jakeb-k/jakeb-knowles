@@ -48,7 +48,7 @@
                     @endfor
                 </div>
             @endif
-            @if (Session::get('viewMode') == 'web')
+            @if($webExists)
             <a href="{{ route('toggleViewMode') }}" title="Toggle Display">
                 <div class="svg-container">
                     <svg version="1.1" id="swap-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 94.35">
@@ -56,7 +56,7 @@
                     </svg>
                 </div>
             </a>
-            @endif
+           @endif
         </div>
     </div>
 </div>
