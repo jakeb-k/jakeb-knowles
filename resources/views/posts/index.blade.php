@@ -80,7 +80,7 @@ Since then I have developed a large range of technical skills to become a full-s
             <a class="project-link" href="{{url('project/'.$w->name)}}"> 
                 <div class="project-box">
                     <img src="{{url('images/logos/'.$w->logo)}}" /> 
-                    <p >
+                    <p>
                         {{$w->name}}
                     </p>
                 </div>

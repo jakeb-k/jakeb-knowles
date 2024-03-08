@@ -157,6 +157,14 @@ HEADER BAR STYLING
         font-family:'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; ; 
         font-size:28px;
     }
+    img {
+        transition:0.15s linear; 
+
+    }
+    img:hover {
+        transform:rotate(-90deg);
+        transition:0.15s linear; 
+    }
 }
 
 
@@ -852,6 +860,9 @@ NEW PROJECT SECTION STYLING
         color:#00BBF9;
         font-size:50px; 
     }
+    a:hover {
+        text-decoration-color: #E5E7EB;
+    }
 }
 .project-row {
     display:flex;
@@ -876,9 +887,10 @@ NEW PROJECT SECTION STYLING
    
     p {
         text-align:center;
-        font-family:monospace; 
-        font-weight:bold;
-        font-size:28px; 
+        font-family:'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+        letter-spacing: 2px;
+        text-decoration:none; 
+        font-size:32px; 
     }
 }
 .project-link {
@@ -900,7 +912,11 @@ NEW PROJECT SECTION STYLING
     transform: translate(12px, 12px);
     box-shadow:-18px -18px 0 #E5E7EB ; 
     background-color: #0061c2;
-    p{color:#E5E7EB ; }
+    text-decoration:none; 
+    p{
+        color:#E5E7EB ;
+       
+    }
 }
 .project-row::-webkit-scrollbar {
     width: 20px;

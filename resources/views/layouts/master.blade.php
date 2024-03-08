@@ -32,7 +32,7 @@
 
             var target;
             if ($(this).hasClass('project')) {
-                target = $(".sContainer");
+                target = $(".project-cont");
             } else if ($(this).hasClass('about')) {
                 target = $(".aContainer");
             } else if ($(this).hasClass('contact') ){
@@ -74,7 +74,7 @@
                     <a class="project" href="">Projects</a>
                 </div>
                 <div class="nTitle">
-                    <h3><img src="{{url('images/penrose_blue.png')}}" /> </h3>
+                    <a href="{{url('/')}}"><img src="{{url('images/penrose_blue.png')}}" /> </a>
                 </div>
                 <div class="nSec">
                     <a class="contact" href="">Contact</a>
