@@ -844,8 +844,7 @@ NEW PROJECT SECTION STYLING
 
 */
 .project-cont {
-    width:100%;
-    padding:2.5% 10%; 
+     padding:2.5% 10%; 
     background:rgb(40, 40, 40);
     h1 {
         font-family:'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -857,17 +856,36 @@ NEW PROJECT SECTION STYLING
 .project-row {
     display:flex;
     flex-direction:row; 
-    justify-content: space-between;
-    align-items: center;
-    margin:2.5% 0; 
+    margin-bottom:2.5%; 
+    padding:2.5% 0; 
+    max-width: 100%;
+    overflow-x: scroll;
 }
 .project-box {
     border:2px solid #00BBF9; 
     box-shadow:12px 12px 0 #0061c2;
-    width:300px;
+    width:315px;
     height:350px; 
     border-radius:5px;
+    margin:0 2.5%;
+    flex-shrink:0; 
 }
+.project-row::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+.project-row::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+.project-row::-webkit-scrollbar-thumb {
+    background: #018cbe;
+    border-radius: 10px;
+}
+
 /*
 
 

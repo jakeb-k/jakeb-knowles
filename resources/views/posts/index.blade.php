@@ -101,6 +101,8 @@ Since then I have developed a large range of technical skills to become a full-s
         <div class="project-box"></div>
         <div class="project-box"></div>
         <div class="project-box"></div>
+        <div class="project-box"></div>
+        <div class="project-box"></div>
     </div>
     <h1>Mobile Apps</h1>
     <div class="project-row">
