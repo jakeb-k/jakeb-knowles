@@ -72,7 +72,8 @@ Since then I have developed a large range of technical skills to become a full-s
 </div> 
 
 <div class="line"><div class="pulse"></div></div>
-<div class="sContainer">
+
+<!-- <div class="sContainer">
     <h1>Projects</h1>
     <h3 class="projIn"> Click / Hover to See More About Each Project! </h3>
     <div id="slideshow">
@@ -93,7 +94,24 @@ Since then I have developed a large range of technical skills to become a full-s
         @endforeach
     </div>
 </div>
+<div class="line"><div class="pulse"></div></div> -->
+<div class="project-cont">
+    <h1>Websites</h1>
+    <div class="project-row">
+        <div class="project-box"></div>
+        <div class="project-box"></div>
+        <div class="project-box"></div>
+    </div>
+    <h1>Mobile Apps</h1>
+    <div class="project-row">
+        <div class="project-box"></div>
+        <div class="project-box"></div>
+        <div class="project-box"></div>
+    </div>
+</div>
+
 <div class="line"><div class="pulse"></div></div>
+
 <div class="cContainer">
     <form method="POST" action='{{url("/contact")}}' id="contact">
         {{csrf_field()}}
@@ -146,305 +164,6 @@ $(document).ready(function() {
 
 </script>
 
-<!-- 
-
-    {{-- MODAL 0 START HERE--}}
-  
-    <div class="modal fade" id="exampleModal0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <?php $images = explode(",",$posts[0]->images); ?>
-                <div class="w3-content w3-display-container">
-                    @foreach($images as $img)
-                        <img class="mySlides0" src="{{url('images/0/'.$img.'.PNG')}}" /> 
-                    @endforeach
-                    <button class="w3-button w3-display-left" onclick="plusDivs0(-1)">&#10094;</button>
-                    <button class="w3-button w3-display-right" onclick="plusDivs0(+1)">&#10095;</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        var slideIndex0 = 1;
-        showDivs0(slideIndex0);
-
-        function plusDivs0(n) {
-        showDivs0(slideIndex0 += n);
-        }
-
-        function showDivs0(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides0");
-        if (n > x.length) {slideIndex0 = 1}
-        if (n < 1) {slideIndex0 = x.length} ;
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        x[slideIndex0-1].style.display = "block";
-        }
-    </script>
-
-    {{-- MODAL 0 END HERE --}}
-
-    {{-- MODAL 1 START HERE--}}
-  
-    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content" style="scale:0.47;margin-top:-250px; font-size:108px; color:#00BBF9;">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true" style="font-size:108px; color:#00BBF9;">&times;</span>
-                </button>
-                <?php $images = explode(",",$posts[1]->images); ?>
-                <div class="w3-content w3-display-container">
-                    @foreach($images as $img)
-                        <img class="mySlides1" src="{{url('images/1/'.$img.'.PNG')}}" /> 
-                    @endforeach
-                    <button class="w3-button w3-display-left" onclick="plusDivs1(-1)">&#10094;</button>
-                    <button class="w3-button w3-display-right" onclick="plusDivs1(+1)" style="max-width:120%;">&#10095;</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        var slideIndex1 = 1;
-        showDivs1(slideIndex1);
-
-        function plusDivs1(n) {
-        showDivs1(slideIndex1 += n);
-        }
-
-        function showDivs1(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides1");
-        if (n > x.length) {slideIndex1 = 1}
-        if (n < 1) {slideIndex1 = x.length} ;
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        x[slideIndex1-1].style.display = "block";
-        }
-    </script>
-    
-
-    {{-- MODAL 1 END HERE --}}
-
-    {{-- MODAL 2 START HERE--}}
-  
-    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content" style="scale:0.57;margin-top:-250px;">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <?php $images = explode(",",$posts[2]->images); ?>
-                <div class="w3-content w3-display-container">
-                    @foreach($images as $img)
-                        <img class="mySlides2" src="{{url('images/2/'.$img.'.png')}}" style="scale:0.8;"/> 
-                    @endforeach
-                    <button class="w3-button w3-display-left" onclick="plusDivs2(-1)">&#10094;</button>
-                    <button class="w3-button w3-display-right" onclick="plusDivs2(+1)" style="max-width:120%;">&#10095;</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        var slideIndex2 = 1;
-        showDivs2(slideIndex2);
-
-        function plusDivs2(n) {
-        showDivs2(slideIndex2 += n);
-        }
-
-        function showDivs2(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides2");
-        if (n > x.length) {slideIndex2 = 1}
-        if (n < 1) {slideIndex2 = x.length} ;
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        x[slideIndex2-1].style.display = "block";
-        }
-    </script>
-    
-
-    {{-- MODAL 2 END HERE --}}
-
-    {{-- MODAL 3 START HERE--}}
-  
-    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <?php $images = explode(",",$posts[3]->images); ?>
-                <div class="w3-content w3-display-container">
-                    @foreach($images as $img)
-                        <img class="mySlides3" src="{{url('images/3/'.$img.'.PNG')}}" /> 
-                    @endforeach
-                    <button class="w3-button w3-display-left" onclick="plusDivs3(-1)">&#10094;</button>
-                    <button class="w3-button w3-display-right" onclick="plusDivs3(+1)" style="max-width:120%;">&#10095;</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        var slideIndex3 = 1;
-        showDivs3(slideIndex3);
-
-        function plusDivs3(n) {
-        showDivs3(slideIndex3 += n);
-        }
-
-        function showDivs3(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides3");
-        if (n > x.length) {slideIndex3 = 1}
-        if (n < 1) {slideIndex3 = x.length} ;
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        x[slideIndex3-1].style.display = "block";
-        }
-    </script>
-    
-
-    {{-- MODAL 3 END HERE --}}
-
-    {{-- MODAL 4 START HERE--}}
-  
-    <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content"  style="scale:0.8;margin-top:-50px; font-size:108px; color:#00BBF9;background:none;">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <?php $images = explode(",",$posts[4]->images); ?>
-                <div class="w3-content w3-display-container">
-                    @foreach($images as $img)
-                        <img class="mySlides4" src="{{url('images/4/'.$img.'.PNG')}}" style="scale:0.8;"/> 
-                    @endforeach
-                    <button class="w3-button w3-display-left" onclick="plusDivs4(-1)">&#10094;</button>
-                    <button class="w3-button w3-display-right" onclick="plusDivs4(+1)" style="max-width:120%;">&#10095;</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        var slideIndex4 = 1;
-        showDivs4(slideIndex4);
-
-        function plusDivs4(n) {
-        showDivs4(slideIndex4 += n);
-        }
-
-        function showDivs4(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides4");
-        if (n > x.length) {slideIndex4 = 1}
-        if (n < 1) {slideIndex4 = x.length} ;
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        x[slideIndex4-1].style.display = "block";
-        }
-    </script>
-
-    {{-- MODAL 4 END HERE --}}
-
-    {{-- MODAL 5 START HERE--}}
-  
-    <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <?php $images = explode(",",$posts[5]->images); ?>
-                <div class="w3-content w3-display-container">
-                    @foreach($images as $img)
-                        <img class="mySlides5" src="{{url('images/5/'.$img.'.PNG')}}" /> 
-                    @endforeach
-                    <button class="w3-button w3-display-left" onclick="plusDivs5(-1)" >&#10094;</button>
-                    <button class="w3-button w3-display-right" onclick="plusDivs5(+1)">&#10095;</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        var slideIndex5 = 1;
-        showDivs5(slideIndex5)
-
-        function plusDivs5(n) {
-        showDivs5(slideIndex5 += n);
-        }
-
-        function showDivs5(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides5");
-        if (n > x.length) {slideIndex5 = 1}
-        if (n < 1) {slideIndex5 = x.length} ;
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        x[slideIndex5-1].style.display = "block";
-        }
-    </script>
-
-    
-
-    {{-- MODAL 5 END HERE --}}
-
-    {{-- MODAL 6 START HERE--}}
-  
-    <div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content" style="scale:0.8;margin-top:-50px; font-size:108px; color:#00BBF9;background:none;">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <?php $images = explode(",",$posts[6]->images); ?>
-                <div class="w3-content w3-display-container">
-                    @foreach($images as $img)
-                        <img class="mySlides6" src="{{url('images/6/'.$img.'.PNG')}}" /> 
-                    @endforeach
-                    <button class="w3-button w3-display-left" onclick="plusDivs6(-1)" style="margin-left:-50px;">&#10094;</button>
-                    <button class="w3-button w3-display-right" onclick="plusDivs6(+1)" style="margin-right:-50px;">&#10095;</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        var slideIndex6 = 1;
-        showDivs6(slideIndex6)
-
-        function plusDivs6(n) {
-        showDivs6(slideIndex6 += n);
-        }
-
-        function showDivs6(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides6");
-        if (n > x.length) {slideIndex6 = 1}
-        if (n < 1) {slideIndex6 = x.length} ;
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        x[slideIndex6-1].style.display = "block";
-        }
-    </script>
-
-    
-
-    {{-- MODAL 6 END HERE --}} -->
 
 
 @endsection
