@@ -26,7 +26,7 @@ class PostSeeder extends Seeder
             ['name'=>'HaHa Hub',
             'description'=>'A joke generator app, built with angular/ionic. Pick a category and get a related joke. This app is monetized through google AdMob and uses a free API to produce jokes. ',
             'images'=>'1,2',
-            'techs'=>'UI Design, API Creation, App Development (Angular - Ionic)',
+            'techs'=>'HTML5,SASS,Ionic,TypeScript,Angular,GitHub,AndroidStudio,GoogleAds',
             'status'=>'Completed September 23 - Available on the Google Play Store',
             'logo'=>'hahaLogo.png']);
 
@@ -42,8 +42,8 @@ class PostSeeder extends Seeder
                 aspects of development, set and met deadlines, delegated tasks,
                 and crafted engaging games for effective language learning",
             'images'=>'1,2,3,4,5,6,7,8,9',
-            'techs'=>'Systems Analysis, Project Management, Team Leadership, App Development (Angular - Ionic)',
-            'status'=>'Scheduled Release for October 23',
+            'techs'=>'HTML5,SASS,Ionic,TypeScript,Angular,GitHub,AndroidStudio,Trello',
+            'status'=>'Completed October 23',
             'logo'=>'japresLogo.png'
         ]);
         DB::table('posts')->insert(
@@ -51,14 +51,14 @@ class PostSeeder extends Seeder
             'description'=>" I created Freeman's Lawns, a full-stack project for a local mowing business. It includes a user-friendly website using HTML, CSS, and jQuery for the front end. Email functionality connects with potential customers, and SEO boosts online visibility, demonstrating my end-to-end solutions for small businesses, merging tech skills with marketing to drive growth.",
             'images'=>'1,2,3,4,5,6,7,8,9,10',
             'techs'=>'PHP,Laravel,jQuery,HTML5,SASS,SQLite,GitHub,Linux,GoogleAnalytics,WordPress',
-            'status'=>'Final Touches - Release in 1-2 weeks',
+            'status'=>'Completed January 24',
             'logo'=>'freemanLogo.jpg']);
 
         DB::table('posts')->insert(
             ['name'=>"Nomster",
             'description'=>"Nomster is a new personal project I have created. It utilises the Spoonacular API's to provide an indepth recipe search using macro nutrients, cuisine, ingredients to name a few. It will have a user account feature to enable users to track their nutrients, be given tailored recipe content and to create a user review system to empower users further. Working on this over the summer with a good friend and am very excited about the potential this app has!",
             'images'=>'nomster1,nomster2,nomster3,nomster4,nomster5,nomster6,nomster7',
-            'techs'=>'HTML5 & SCSS, TypeScript, Angular, SQL (SQLite), REST APIs, Mobile Development, Git (Version Control), Canva (UI Design)',
+            'techs'=>'HTML5,SASS,Ionic,TypeScript,Angular,SQLite,GitHub,AndroidStudio',
             'status'=>'In Progress - Scheduled Release in 2024',
             'logo'=>'nomsterLogo.png']);
             
