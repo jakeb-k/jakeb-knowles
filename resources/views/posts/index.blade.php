@@ -73,42 +73,32 @@ Since then I have developed a large range of technical skills to become a full-s
 
 <div class="line"><div class="pulse"></div></div>
 
-<!-- <div class="sContainer">
-    <h1>Projects</h1>
-    <h3 class="projIn"> Click / Hover to See More About Each Project! </h3>
-    <div id="slideshow">
-        @foreach($posts as $p)
-        <div class="sBox">
-            <img src="{{url('images/logos/'.$p->logo)}}" /> 
-            <div class="overlay-1">
-                <h3>{{$p->name}}</h3>
-                <h5><i>{{$p->techs}}</i></h5>
-                <p>{{$p->description}}</p> 
-                <a data-toggle="modal" data-target="#exampleModal{{$loop->index}}" style="text-decoration:underline;"> View Pictures </a>
-                @if($p->url)
-                <br><p>{{$p->url}}</p>
-                @endif
-                <p ><strong style="font-size:18px; margin-top:50px;"> {{$p->status}}</strong></p>
-            </div>
-        </div>
-        @endforeach
-    </div>
-</div>
-<div class="line"><div class="pulse"></div></div> -->
 <div class="project-cont">
     <h1>Websites</h1>
     <div class="project-row">
-        <div class="project-box"></div>
-        <div class="project-box"></div>
-        <div class="project-box"></div>
-        <div class="project-box"></div>
-        <div class="project-box"></div>
+        @foreach($webPosts as $w)
+            <a class="project-link" href="{{url('project/'.$w->name)}}"> 
+                <div class="project-box">
+                    <img src="{{url('images/logos/'.$w->logo)}}" /> 
+                    <p >
+                        {{$w->name}}
+                    </p>
+                </div>
+            </a>
+        @endforeach
     </div>
     <h1>Mobile Apps</h1>
     <div class="project-row">
-        <div class="project-box"></div>
-        <div class="project-box"></div>
-        <div class="project-box"></div>
+        @foreach($mobilePosts as $m)
+            <a class="project-link" href="{{url('project/'.$m->name)}}"> 
+                <div class="project-box">
+                    <img src="{{url('images/logos/'.$m->logo)}}" /> 
+                    <p>
+                        {{$m->name}}
+                    </p>
+                </div>
+            </a>
+        @endforeach
     </div>
 </div>
 

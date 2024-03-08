@@ -12,6 +12,8 @@ use Google\Cloud\RecaptchaEnterprise\V1\Event;
 use Google\Cloud\RecaptchaEnterprise\V1\Assessment;
 use Google\Cloud\RecaptchaEnterprise\V1\TokenProperties\InvalidReason;
 
+use Illuminate\Support\Facades\Session;
+
 
 class PostController extends Controller
 {
@@ -21,9 +23,13 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all(); 
+        $webPosts = Post::where('type', 'web')->get();
+
+        $mobilePosts = Post::where('type', 'mobile')->get();
+
+
         
-        return view('posts.index')->with('posts', $posts); 
+        return view('posts.index')->with('webPosts', $webPosts)->with('mobilePosts', $mobilePosts); 
     }
 
     /**
@@ -56,26 +62,31 @@ class PostController extends Controller
      * Display the specified resource.
      */
     public function show(string $name)
+    
     {
         $post = Post::where('name', $name)->first();
 
+        
         // Check directories for web and mobile
         $webPath = public_path('images/'.$name.'/web');
         $mobilePath = public_path('images/'.$name.'/mobile');
 
-        $webExists = is_dir($webPath) && count(scandir($webPath)) > 2;
-        $mobileExists = is_dir($mobilePath) && count(scandir($mobilePath)) > 2;
+        $webExists = is_dir($webPath);
+        $mobileExists = is_dir($mobilePath);
 
         // Determine the view mode based on the available directories
         if ($webExists && !$mobileExists) {
             $viewMode = 'web';
+            Session::put('viewMode', 'web');
+
+            
         } elseif (!$webExists && $mobileExists) {
             $viewMode = 'mobile';
+            Session::put('viewMode', 'mobile');
         } else {
             // Default to web if both exist or neither exists
-            $viewMode = 'mobile';
+            $viewMode = 'web';
         }
-
       
 
         $items = scandir(public_path('images/'.$name.'/'.$viewMode));

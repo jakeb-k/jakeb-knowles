@@ -861,14 +861,46 @@ NEW PROJECT SECTION STYLING
     max-width: 100%;
     overflow-x: scroll;
 }
-.project-box {
-    border:2px solid #00BBF9; 
-    box-shadow:12px 12px 0 #0061c2;
+.project-box { 
+    box-shadow:18px 18px 0 #0061c2;
+    background:#E5E7EB; 
+    width:inherit;
+    height:inherit; 
+    border-radius:5px;
+  
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+
+    transition: 0.2s linear;
+   
+    p {
+        text-align:center;
+        font-family:monospace; 
+        font-weight:bold;
+        font-size:28px; 
+    }
+}
+.project-link {
     width:315px;
     height:350px; 
-    border-radius:5px;
     margin:0 2.5%;
     flex-shrink:0; 
+}
+.project-box img {
+    width: 270px ;
+    max-height: 80%;
+    object-fit: fill;
+    margin:auto; 
+    border-radius:35px; 
+
+}
+.project-box:hover {
+   
+    transform: translate(12px, 12px);
+    box-shadow:-18px -18px 0 #E5E7EB ; 
+    background-color: #0061c2;
+    p{color:#E5E7EB ; }
 }
 .project-row::-webkit-scrollbar {
     width: 20px;
