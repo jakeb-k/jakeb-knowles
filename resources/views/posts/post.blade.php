@@ -20,7 +20,7 @@
     <div class="post-content">
         <div class="post-desc">
             <p>{{$post->description}}</p>
-            <div class="cta-cont">
+            <div class="cta-cont2">
                 <a class="cta-btn2" href="{{$post->url}}">View Project</a>
             </div>
         </div>

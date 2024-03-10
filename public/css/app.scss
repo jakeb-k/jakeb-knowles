@@ -829,7 +829,7 @@ POST DETAIL PAGE
 
 
 */
-.cta-cont {
+.cta-cont2, .cta-cont {
     position: relative;
     height: 75px; /* Example height */
     width: 100%; /* Example width */
@@ -1379,17 +1379,17 @@ MEDIA QUERIES
             margin-bottom:10px; 
         }
     }
-    .cta-cont {
+    .cta-cont2 {
         height:40px; 
    
     }
-    a.cta-btn2 {
+    a.cta-btn2, a.cta-btn {
         font-size:18px; 
         padding:12.5px; 
         box-shadow:8px 8px 0 #0061c2;
        
     }
-    a.cta-btn2:hover {
+    a.cta-btn2:hover, a.cta-btn2:hover {
         transform: translate(8px, 8px);
         box-shadow:-8px -8px 0 #E5E7EB ; 
     }
