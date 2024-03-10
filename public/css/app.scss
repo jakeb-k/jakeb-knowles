@@ -839,7 +839,7 @@ a.cta-btn, a.cta-btn2 {
     text-align: center;
     box-shadow:12px 12px 0 #0061c2;
     width:50%; 
-    height:75px;
+    height:100%;
 
     padding:20px;
     transition: 0.2s linear;
@@ -1371,6 +1371,27 @@ MEDIA QUERIES
     }
     .post-techs img{
         width:30px; 
+    }
+    .post-desc {
+        height:fit-content;
+        padding:15px 12.5px; 
+        p {
+            margin-bottom:10px; 
+        }
+    }
+    .cta-cont {
+        height:40px; 
+   
+    }
+    a.cta-btn2 {
+        font-size:18px; 
+        padding:12.5px; 
+        box-shadow:8px 8px 0 #0061c2;
+       
+    }
+    a.cta-btn2:hover {
+        transform: translate(8px, 8px);
+        box-shadow:-8px -8px 0 #E5E7EB ; 
     }
 
 }
