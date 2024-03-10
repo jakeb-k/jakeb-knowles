@@ -69,18 +69,18 @@
     </script>
     <body>
         <div id="navBar">
-                <div class="nSec">
-                    <a class="about" href="">About</a>
-                    <a class="project" href="">Projects</a>
-                </div>
-                <div class="nTitle">
-                    <a href="{{url('/')}}"><img src="{{url('images/penrose_blue.png')}}" /> </a>
-                </div>
-                <div class="nSec">
-                    <a class="contact" href="">Contact</a>
-                    <a class="repo" href="https://github.com/jakeb-k">Repositories</a>
-                </div>
+            <div class="nSec">
+                <a class="about" href="">About</a>
+                <a class="project" href="">Projects</a>
             </div>
+            <div class="nTitle">
+                <a href="{{url('/')}}"><img src="{{url('images/penrose_blue.png')}}" /> </a>
+            </div>
+            <div class="nSec">
+                <a class="contact" href="">Contact</a>
+                <a class="repo" href="https://github.com/jakeb-k">Repositories</a>
+            </div>
+        </div>
 <!-- 
             <div class="nav-bar">
                 <div class="nav-name">

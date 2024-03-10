@@ -107,7 +107,7 @@ HEADER BAR STYLING
 }
 #navBar.shrunken * {
     transition: 0.5s ease-in-out;
-    scale: 0.815;
+    scale: 0.85;
 }
 
 #navBar.shrunken {
@@ -121,16 +121,15 @@ HEADER BAR STYLING
 .nSec {
     transition: 0.5s ease-in-out;
     height:45px; 
+    
    
-    padding-top:5px; 
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 30%;
     font-size: 2em;
     transition: 0.3s ease-in-out;
-    top: 0;
-    left:0; 
+
 }
 
 .nSec a {
@@ -152,7 +151,7 @@ HEADER BAR STYLING
 
 .nTitle {
     width: 40%;
-    margin-top:-20px; 
+    margin-top:-10px; 
     margin-left:30px; 
     
     img {
@@ -1392,7 +1391,23 @@ MEDIA QUERIES
         transform: translate(8px, 8px);
         box-shadow:-8px -8px 0 #E5E7EB ; 
     }
-
+    .project-link {
+        width:250px;
+        height:280px;
+        margin-right:50px;  
+        flex-shrink:0; 
+        margin-bottom:10px; 
+    }
+    .project-box img {
+        width:223px;
+    }
+    .project-row {
+        height:fit-content;
+        padding:20px; 
+        overflow-x: scroll;
+        overflow-y: hidden;
+        
+    }
 }
 
 @media only screen and (max-width:650px) {
