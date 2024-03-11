@@ -108,12 +108,30 @@ Since then I have developed a large range of technical skills to become a full-s
     <form method="POST" action='{{url("/contact")}}' id="contact">
         {{csrf_field()}}
         <h1>Get In Touch</h1>
+        
         <label class="contact-label" for="name">Name:</label>
         <input type="text" name="name" id="name" />
+        @error('name')
+            <span class="help-block">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror
+
         <label class="contact-label" for="email">Email:</label>
         <input type="text" name="email" id="email" />
+        @error('email')
+            <span class="help-block">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror
+
         <label class="contact-label" for="note">Message:</label>
         <textarea name="note" id="note"></textarea>
+        @error('note')
+            <span class="help-block">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror
         <div class="captcha">
             {!! NoCaptcha::display() !!}
             @if ($errors->has('g-recaptcha-response'))

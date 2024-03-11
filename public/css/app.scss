@@ -674,44 +674,28 @@ input:focus {
 
 }
 
-#contact button {
-    
-    border-radius: 5px;
-    box-shadow: 10px 10px 0 #018cbe;
-    transition: .5s ease-in-out;
+button.submit {
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 0 5px #00BBF9;
+    border-radius:15px; 
+    transition: .3s ease-out;
     padding-top: 10px;
     font-size: 38px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     border: 3px solid #00BBF9;
-    background: none;
-    color: #00BBF9;
+    background:none; 
     font-family:'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:#00BBF9; 
     
 }
-
-#contact button span {
-    margin-top: 5px;
-}
-
-#contact button {
-    box-shadow: 0 0 5px #00BBF9;
-    border-radius: 80px;
-    transition: .5s ease-in-out;
-  
-    animation-delay: 0.3s;
-}
-
-
-#contact button img {
-    transition: 0.4s ease-in-out;
-    transform: rotate(90deg);
-}
-
-#contact button:hover img {
-    transition: 0.4s ease-in-out;
-    transform: rotate(90deg) translate(0, -90px);
+button.submit:hover {
+    background:#00BBF9;
+    transition: 0.3s ease-out; 
+    font-weight:bold; 
+    color:rgb(40, 40, 40); 
 }
 /*
 
@@ -1461,11 +1445,11 @@ MEDIA QUERIES
         box-shadow: 0 0 10px #00BBF9;
     }
 
-    #contact button {
+    button.submit {
         font-size: 32px;
     }
 
-    #contact button:hover img {
+    button.submit:hover img {
         transition: 0.4s ease-in-out;
         transform: rotate(90deg) translate(0, -20px);
     }
