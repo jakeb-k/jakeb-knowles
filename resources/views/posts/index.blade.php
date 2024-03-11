@@ -108,11 +108,11 @@ Since then I have developed a large range of technical skills to become a full-s
     <form method="POST" action='{{url("/contact")}}' id="contact">
         {{csrf_field()}}
         <h1>Get In Touch</h1>
-        <label for="name">NAME:</label>
+        <label class="contact-label" for="name">Name:</label>
         <input type="text" name="name" id="name" />
-        <label for="email">EMAIL:</label>
+        <label class="contact-label" for="email">Email:</label>
         <input type="text" name="email" id="email" />
-        <label for="note">MESSAGE:</label>
+        <label class="contact-label" for="note">Message:</label>
         <textarea name="note" id="note"></textarea>
         <div class="captcha">
             {!! NoCaptcha::display() !!}
@@ -122,7 +122,7 @@ Since then I have developed a large range of technical skills to become a full-s
                 </span>
             @endif
         </div> 
-        <button style="margin-top:40px;" class="submit" type="submit"><span class="subPulse">SUBMIT</span> <img id="subImg" src="{{url('images/penrose_blue.png')}}" /></button>
+        <button style="margin-top:40px;" class="submit" type="submit">Send Message!</button>
     </form>
 </div>
 <!-- FLY IN SCRIPT CONTROLLER -->

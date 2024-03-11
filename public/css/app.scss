@@ -1,5 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/bowlby-one');
-@import url('https://fonts.cdnfonts.com/css/heritho');
+
 
 @import url('https://fonts.googleapis.com/css?family=Bebas+Neue:400,700&display=swap');
 
@@ -580,7 +580,8 @@ ABOUT SECTION STYLING
 .aboutTitle h1,
 .infoBox h3 {
     color: #00BBF9;
-    font-family: 'Heritho', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
 }
 
 .aboutTitle {
@@ -650,7 +651,7 @@ label {
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 24px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: monospace;
 }
 
 input {
@@ -665,7 +666,8 @@ input:focus {
 }
 
 #contact h1 {
-    font-family: 'Heritho', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1px;
     text-align: center;
     font-size: 44px;
     color: #00BBF9;
@@ -685,7 +687,8 @@ input:focus {
     border: 3px solid #00BBF9;
     background: none;
     color: #00BBF9;
-    font-family: 'Heritho', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
 }
 
 #contact button span {
