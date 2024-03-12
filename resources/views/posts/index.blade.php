@@ -190,6 +190,8 @@ $(document).ready(function() {
     const h1Element = typewriteDiv.querySelector('h1');
     const aboutDiv1 = document.querySelector('.aboutImg');
     const aboutDiv2 = document.querySelector('#aboutContent');
+
+    const contactForm = document.querySelector('#contact');
     
 
     const observer = new IntersectionObserver(entries => {
@@ -200,16 +202,31 @@ $(document).ready(function() {
                 aboutDiv1.style.animation = 'opacityChange 2s linear';
                 aboutDiv1.style.opacity = '1';
                 aboutDiv2.style.animation = 'flyUpFromBottom 0.5s linear forwards';
-                
             
-
                 observer.unobserve(entry.target); // Stop observing once animations are triggered
             }
         });
     }, {
         threshold: 0.7 // Set the threshold to 70% visibility
     });
+    const observer2 = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            
+                contactForm.style.animation = 'flyUpFromBottom 0.7s ease-in forwards';
+                contactForm.style.opacity = '1';
+            
+
+                observer2.unobserve(entry.target); // Stop observing once animations are triggered
+            }
+        });
+    }, {
+        threshold: 0.3 // Set the threshold to 70% visibility
+    });
+
     observer.observe(typewriteDiv);
+    observer2.observe(contactForm);
+
  
 
 });
