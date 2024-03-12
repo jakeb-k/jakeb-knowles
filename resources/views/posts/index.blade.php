@@ -179,20 +179,27 @@ $(document).ready(function() {
     }
 
     window.addEventListener('load', startAnimation);
-});  //bounding box for about sec
+});  
+
 $(document).ready(function() {
     const typewriteDiv = document.querySelector('.typewriter');
     const h1Element = typewriteDiv.querySelector('h1');
+    const aboutDiv1 = document.querySelector('.aboutImg');
+    const aboutDiv2 = document.querySelector('#aboutContent');
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+      
                 h1Element.classList.add('type'); // Add classes to activate animations
+
+                aboutDiv1.style.animation = 'flyUpFromBottom 0.5s linear forwards';
+                aboutDiv2.style.animation = 'flyUpFromBottom 0.5s linear forwards';
                 observer.unobserve(entry.target); // Stop observing once animations are triggered
             }
         });
     }, {
-        threshold: 0.5 // Set the threshold to 50% visibility
+        threshold: 0.7 // Set the threshold to 50% visibility
     });
 
     observer.observe(typewriteDiv);

@@ -515,7 +515,16 @@ ABOUT SECTION STYLING
 
 
 */
-
+@keyframes flyUpFromBottom {
+    0% {
+        transform:translateY(100%); 
+        opacity: 0; 
+    }
+    100% {
+        transform:translateY(0%); 
+        opacity: 1;
+    }
+}
 
 .aContainer {
     display: flex;
@@ -602,12 +611,14 @@ ABOUT SECTION STYLING
 .type {
     animation:typing 1.5s steps(40, end),
     blink-caret .75s step-end infinite;
+    animation-delay:.1s; 
+    
 }
 
   /* The typing effect */
   @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from { width: 0; opacity:0; }
+    to { width: 100%; opacity:1;  }
   }
   
   /* The typewriter cursor effect */
@@ -617,10 +628,11 @@ ABOUT SECTION STYLING
   }
   .typewriter h1 {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
+    border-right: .15em solid #00BBF9; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
+    letter-spacing: 1px; /* Adjust as needed */
+
   }
   
 
@@ -861,6 +873,18 @@ a.cta-btn:hover, a.cta-btn2:hover {
     padding:7.5% 5%; 
     height:fit-content;  
 }
+  /* The typing effect */
+  @keyframes typing2 {
+    from { width: 0;  }
+    to { width: 25%;  }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret2 {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(40, 40, 40); }
+  }
+
 .post-header {
     display:flex;
     flex-direction:row;
@@ -872,6 +896,15 @@ a.cta-btn:hover, a.cta-btn2:hover {
     font-family:'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size:3em; 
     margin-left:10px; 
+
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(40, 40, 40); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 10px; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 1px; /* Adjust as needed */
+
+    animation:typing2 1.5s steps(25, end),
+        blink-caret2 .75s step-end infinite;
     }
 }
 .post-content {
@@ -895,20 +928,21 @@ a.cta-btn:hover, a.cta-btn2:hover {
     li{
         margin:5px 0; 
     }
+    animation:flyUpFromBottom 0.5s ease-in forwards; 
 
 }
-
 .post-techs {
     display:flex;
     flex-direction:row;
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
+    
     img {
         width:35px; 
-        
     }
 }
+
 .logo {
     filter: invert(100%);
 }
@@ -921,7 +955,6 @@ a.cta-btn:hover, a.cta-btn2:hover {
     border-radius:35%;
     margin:0 10px; 
     box-shadow:0 0 10px #0061c2;
-
 }
   
 .tech-logo .tooltip-text {
@@ -1300,8 +1333,8 @@ MEDIA QUERIES
         height: fit-content;
     }
 
-    .infoBox h3 {
-        font-size: 18px;
+    .infoBox h1 {
+        border-right:none; 
     }
 
     .aboutImg img {
@@ -1322,6 +1355,9 @@ MEDIA QUERIES
     }
     .post-container {
         padding-top:100px; 
+    }
+    .post-header h1 {
+        border-right:none; 
     }
     .post-content {
         display:flex; 
