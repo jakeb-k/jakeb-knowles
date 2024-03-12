@@ -69,7 +69,7 @@
             </div>
            
             <p> 
-            As a natural-born coder, my fascination with technology was ignited the moment I saw 'Hello World' echo in the terminal, setting me on an unyielding path in software development. 
+                As a natural-born coder, my fascination with technology was ignited the moment I saw 'Hello World' echo in the terminal, setting me on an unyielding path in software development. 
                 With a Bachelor of Information Technology from Griffith University and hands-on experience in developing 
                 cutting-edge projects like Aussie PicklePro and Nomster, I've honed a diverse skill set across full-stack 
                 development. My expertise spans from JavaScript, Angular, and React to Laravel, Python, and various database 
@@ -83,8 +83,10 @@
 <div class="line"><div class="pulse"></div></div>
 
 <div class="project-cont">
-    <h1>Websites</h1>
-    <div class="project-row">
+    <h1>
+        <span id="project-title-1">Websites</span>
+    </h1>
+    <div class="project-row-1">
         @foreach($webPosts as $w)
             <a class="project-link" href="{{url('project/'.$w->name)}}"> 
                 <div class="project-box">
@@ -96,8 +98,10 @@
             </a>
         @endforeach
     </div>
-    <h1>Mobile Apps</h1>
-    <div class="project-row">
+    <h1>
+       <span id="project-title-2">Mobile Apps</span> 
+    </h1>
+    <div class="project-row-2">
         @foreach($mobilePosts as $m)
             <a class="project-link" href="{{url('project/'.$m->name)}}"> 
                 <div class="project-box">
@@ -162,11 +166,10 @@ $(document).ready(function() {
     function startAnimation() {
         box1.style.animation = 'flyInFromLeft 2s ease-in-out forwards';
         box2.style.animation = 'flyInFromRight 2s ease-in-out forwards';
-
-        setTimeout(() => {
-            flyInCompleted = true;
+        flyInCompleted = true;
+        if(flyInCompleted){
             activateSCSSAnimations();
-        }, 2000); // assuming 'flyIn' takes 2 seconds
+        } // assuming 'flyIn' takes 2 seconds
     }
 
     function activateSCSSAnimations() {
@@ -182,28 +185,66 @@ $(document).ready(function() {
 });  
 
 $(document).ready(function() {
+    //ABOUT ITEMS
     const typewriteDiv = document.querySelector('.typewriter');
     const h1Element = typewriteDiv.querySelector('h1');
     const aboutDiv1 = document.querySelector('.aboutImg');
     const aboutDiv2 = document.querySelector('#aboutContent');
+    
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-      
-                h1Element.classList.add('type'); // Add classes to activate animations
-
-                aboutDiv1.style.animation = 'flyUpFromBottom 0.5s linear forwards';
+                //ABOUT ANIMS
+                h1Element.classList.add('type'); 
+                aboutDiv1.style.animation = 'opacityChange 2s linear';
+                aboutDiv1.style.opacity = '1';
                 aboutDiv2.style.animation = 'flyUpFromBottom 0.5s linear forwards';
+                
+            
+
                 observer.unobserve(entry.target); // Stop observing once animations are triggered
             }
         });
     }, {
-        threshold: 0.7 // Set the threshold to 50% visibility
+        threshold: 0.7 // Set the threshold to 70% visibility
     });
-
     observer.observe(typewriteDiv);
+ 
+
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Observing individual titles using their IDs
+  const title1 = document.querySelector('#project-title-1');
+  const title2 = document.querySelector('#project-title-2');
+
+  const row1 = document.querySelector('.project-row-1');
+  const row2 = document.querySelector('.project-row-2');
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = `flash 1s ease forwards`;
+
+        // Trigger the corresponding row animation based on the title's ID
+        if (entry.target.id === 'project-title-1') {
+          row1.style.animation = 'slideFromLeft 1s linear';
+        } else if (entry.target.id === 'project-title-2') {
+            row2.style.animation = 'slideFromRight 1s linear';
+        }
+
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.7 });
+
+  // Start observing each title
+  if (title1) observer.observe(title1);
+  if (title2) observer.observe(title2);
+});
+
+
+
 </script>
 
 

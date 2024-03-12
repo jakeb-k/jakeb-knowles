@@ -37,16 +37,158 @@ GENERAL
 
 }
 
+/*
+
+
+
+
+ANIMATIONS
+
+
+
+
+
+*/
+@keyframes opacityChange{
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity:0.25; 
+    }
+    100% {
+        opacity:1; 
+    }
+}
+@keyframes flyInFromLeft {
+    0% {
+    transform: translateX(-100%); /* Starting position outside the left edge */
+    }
+    20% {
+        transform: translateX(0%); /* Collide at the center */
+    }
+    45% {
+        transform: translateX(-30%); /* Bounce at the center */
+    }
+    60% {
+        transform: translateX(0%); /* Collide at the center */
+        }
+    80% {
+        transform: translateX(-5%); /* Bounce at the center */
+
+    }
+    100% {
+      left: 0; /* Return to the center */
+    }
+  }
+  
+@keyframes flyInFromRight {
+    0% {
+        transform: translateX(100%); /* Starting position outside the right edge */
+    }
+    20% {
+    transform: translateX(0%); /* Collide at the center */
+    }
+    45% {
+        transform: translateX(30%); /* Bounce at the center */
+    }
+    60% {
+        transform: translateX(0%); /* Collide at the center */
+        }
+    80% {
+        transform: translateX(5%); /* Bounce at the center */
+
+    }
+    100% {
+      right: 0; /* Return to the center */
+    }
+  }
+  @keyframes flyUpFromBottom {
+    0% {
+        transform:translateY(100%); 
+        opacity: 0; 
+    }
+    100% {
+        transform:translateY(0%); 
+        opacity: 1;
+    }
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0; opacity:0; }
+    to { width: 100%; opacity:1;  }
+}
+  
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #00BBF9; }
+}
+/* The typing effect */
+@keyframes typing2 {
+    from { width: 0;  }
+    to { width: 25%;  }
+}
+    
+    /* The typewriter cursor effect */
+@keyframes blink-caret2 {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(40, 40, 40); }
+}
+@keyframes resizeAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+
+    }
+}
+@keyframes flash {
+    0% {
+      background: #00BBF9;
+      opacity: 1;
+    }
+    80% {
+      background: #00BBF9;
+      opacity: 1;
+    }
+    100% {
+      background: none;
+      opacity: 1;
+    }
+  }    
 @keyframes pulse {
     from {
         transform: translate(0, 0);
     }
 
     to {
-        transform: translate(1000%, 0)
+        transform: translate(1000%, 0);
     }
 }
-
+@keyframes slideFromLeft {
+    from {
+        transform:translateX(-100%);
+    }
+    to {
+        transform:translateX(0%);
+    }
+}
+@keyframes slideFromRight {
+    from {
+        transform:translateX(100%);
+    }
+    to {
+        transform:translateX(0%);
+    }
+}
 /*
 
 
@@ -226,116 +368,6 @@ SPLASH PAGE STYLING
     font-size: 26px;
     color: #00BBF9;
 }
-//CONTACT GLASS BUTTON CSS
-.container {
-	//width: 1000px;
-    align-self:center; 
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
-.container .btn {
-	position: relative;
-	top: 0;
-	left: 0;
-	width: 250px;
-	height: 50px;
-	margin:20px auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-    align-self:center; 
-}
-.container .btn a {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: rgba(255, 255, 255, 0.05);
-	box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-	border-top: 1px solid rgba(255, 255, 255, 0.1);
-	border-radius: 30px;
-	padding: 10px;
-	letter-spacing: 1px;
-	text-decoration: none;
-    font-family: 'Courier New', Courier, monospace;
-	overflow: hidden;
-	color: #fff;
-	font-weight: 400px;
-	z-index: 1;
-	transition: 0.5s;
-	backdrop-filter: blur(15px);
-}
-.container .btn:hover a {
-	letter-spacing: 3px;
-}
-.container .btn a::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 50%;
-	height: 100%;
-	background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
-	transform: skewX(45deg) translate(0);
-	transition: 0.5s;
-	filter: blur(0px);
-}
-.container .btn:hover a::before {
-	transform: skewX(45deg) translate(200px);
-}
-.container .btn::before {
-	content: "";
-	position: absolute;
-	left: 50%;
-	transform: translatex(-50%);
-	bottom: -5px;
-	width: 30px;
-	height: 10px;
-	background: #f00;
-	border-radius: 10px;
-	transition: 0.5s;
-	transition-delay: 0.5;
-}
-.container .btn:hover::before /*lightup button*/ {
-	bottom: 0;
-	height: 50%;
-	width: 80%;
-	border-radius: 30px;
-}
-
-.container .btn::after {
-	content: "";
-	position: absolute;
-	left: 50%;
-	transform: translatex(-50%);
-	top: -5px;
-	width: 30px;
-	height: 10px;
-	background: #f00;
-	border-radius: 10px;
-	transition: 0.5s;
-	transition-delay: 0.5;
-}
-.container .btn:hover::after /*lightup button*/ {
-	top: 0;
-	height: 50%;
-	width: 80%;
-	border-radius: 30px;
-}
-
-.container .btn::before, /* 2*/
-.container .btn::after {
-	background: #2db2ff;
-	box-shadow: 0 0 5px #2db2ff, 0 0 15px #2db2ff, 0 0 30px #2db2ff,
-		0 0 60px #2db2ff;
-}
-
 .fade3 {
     opacity:0; 
     animation: fade-in .8s 3.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
@@ -382,20 +414,7 @@ SPLASH PAGE STYLING
   .fade2:nth-child(4) {
     animation: fade-in .8s 4.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
-@keyframes flash {
-  0% {
-    background: #00BBF9;
-    opacity: 1;
-  }
-  80% {
-    background: #00BBF9;
-    opacity: 1;
-  }
-  100% {
-    background: none;
-    opacity: 1;
-  }
-}
+
 
 .flash:nth-child(1) {
   background: #00BBF9;
@@ -459,51 +478,6 @@ SPLASH PAGE STYLING
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
 }
- 
-@keyframes flyInFromLeft {
-    0% {
-    transform: translateX(-100%); /* Starting position outside the left edge */
-    }
-    20% {
-        transform: translateX(0%); /* Collide at the center */
-    }
-    45% {
-        transform: translateX(-30%); /* Bounce at the center */
-    }
-    60% {
-        transform: translateX(0%); /* Collide at the center */
-        }
-    80% {
-        transform: translateX(-5%); /* Bounce at the center */
-
-    }
-    100% {
-      left: 0; /* Return to the center */
-    }
-  }
-  
-@keyframes flyInFromRight {
-    0% {
-        transform: translateX(100%); /* Starting position outside the right edge */
-    }
-    20% {
-    transform: translateX(0%); /* Collide at the center */
-    }
-    45% {
-        transform: translateX(30%); /* Bounce at the center */
-    }
-    60% {
-        transform: translateX(0%); /* Collide at the center */
-        }
-    80% {
-        transform: translateX(5%); /* Bounce at the center */
-
-    }
-    100% {
-      right: 0; /* Return to the center */
-    }
-  }
-
 /*
 
 
@@ -515,16 +489,7 @@ ABOUT SECTION STYLING
 
 
 */
-@keyframes flyUpFromBottom {
-    0% {
-        transform:translateY(100%); 
-        opacity: 0; 
-    }
-    100% {
-        transform:translateY(0%); 
-        opacity: 1;
-    }
-}
+
 
 .aContainer {
     display: flex;
@@ -547,6 +512,7 @@ ABOUT SECTION STYLING
 .aboutImg {
     padding-top: 40px;
     width: 100%;
+    opacity:0; 
 }
 
 .aboutImg img {
@@ -615,17 +581,6 @@ ABOUT SECTION STYLING
     
 }
 
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0; opacity:0; }
-    to { width: 100%; opacity:1;  }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #00BBF9; }
-  }
   .typewriter h1 {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid #00BBF9; /* The typwriter cursor */
@@ -746,7 +701,7 @@ NEW PROJECT SECTION STYLING
         text-decoration-color: #E5E7EB;
     }
 }
-.project-row {
+.project-row-1, .project-row-2 {
     display:flex;
     flex-direction:row; 
     margin-bottom:2.5%; 
@@ -800,18 +755,18 @@ NEW PROJECT SECTION STYLING
        
     }
 }
-.project-row::-webkit-scrollbar {
+.project-row-1::-webkit-scrollbar, .project-row-2::-webkit-scrollbar {
     width: 20px;
 }
 
 /* Track */
-.project-row::-webkit-scrollbar-track {
+.project-row-1::-webkit-scrollbar-track, .project-row-2::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
     border-radius: 10px;
 }
 
 /* Handle */
-.project-row::-webkit-scrollbar-thumb {
+.project-row-1::-webkit-scrollbar-thumb, .project-row-2::-webkit-scrollbar-thumb {
     background: #018cbe;
     border-radius: 10px;
 }
@@ -873,17 +828,6 @@ a.cta-btn:hover, a.cta-btn2:hover {
     padding:7.5% 5%; 
     height:fit-content;  
 }
-  /* The typing effect */
-  @keyframes typing2 {
-    from { width: 0;  }
-    to { width: 25%;  }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret2 {
-    from, to { border-color: transparent }
-    50% { border-color: rgb(40, 40, 40); }
-  }
 
 .post-header {
     display:flex;
@@ -988,20 +932,7 @@ a.cta-btn:hover, a.cta-btn2:hover {
     border-radius:10px; 
     box-shadow:0 8px 12px rgb(89, 89, 89); 
 }
-@keyframes resizeAnimation {
-    0% {
-        transform: scale(1);
-        opacity: 0;
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1);
 
-    }
-}
 
 .resizing {
     animation: resizeAnimation 1s ease forwards;
