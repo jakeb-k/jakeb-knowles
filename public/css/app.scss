@@ -31,9 +31,9 @@ GENERAL
     box-shadow: 0 0 5px #00BBF9;
     width: 10%;
 
-    -moz-animation: pulse .5s infinite;
-    -webkit-animation: pulse .5s infinite;
-    animation: pulse .5s infinite;
+    -moz-animation: pulse .5s linear infinite;
+    -webkit-animation: pulse 0.5s linear infinite;
+    animation: pulse 0.5s linear infinite;
 
 }
 
@@ -542,6 +542,7 @@ ABOUT SECTION STYLING
     width: 390px;
     height: 390px;
     border: 2px solid #00BBF9;
+    border-radius:5px; 
     object-fit: cover;
 }
 
@@ -553,7 +554,7 @@ ABOUT SECTION STYLING
 }
 
 .aboutTitle h1,
-.infoBox h3 {
+.infoBox h1 {
     color: #00BBF9;
     font-family:'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     
@@ -579,14 +580,17 @@ ABOUT SECTION STYLING
 
 .infoBox {
     margin-left: 10%;
-    height: 375px;
+    height: fit-content;
     width: 85%;
     background: rgb(40, 40, 40);
     border-radius: 5px;
     padding: 10px;
-    color: #018cbe;
+    color: #2db2ff;
     border: 2px solid #00BBF9;
     box-shadow: 0 0 10px #00BBF9;
+    p{
+        margin-bottom:25px; 
+    }
 }
 
 
@@ -1262,12 +1266,8 @@ MEDIA QUERIES
         font-size: 12px;
     }
 
-    .aboutTitle h1 {
-        font-size: 18px;
-    }
-
     .infoBox {
-        height: 425px;
+        height: fit-content;
     }
 
     .infoBox h3 {

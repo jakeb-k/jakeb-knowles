@@ -64,9 +64,8 @@
         </div>
     </div>
         <div class="infoBox">
-            <h3> CODE  ·  CREATE  ·  CONQUER </h3>
-            <p>As a young individual, we are faced with many difficult choices. One such being the big question of 'What are you going to do with your life?' Fortunately for me, I saw <i> Hello World </i> print in the terminal, and it was that moment that changed my life forever. 
-Since then I have developed a large range of technical skills to become a full-stack developer, these include: Javascript (Angular, React, Node / Express, Typescript, jQuery) PHP (Laravel), Python (Django, Pandas, NumPy), SQL and NoSQL (SQLite, MySQL, MongoDB) and of course HTML & CSS. </p>
+            <h1> CODE  ·  CREATE  ·  CONQUER </h1>
+            <p>As a natural-born coder, my fascination with technology was ignited the moment I saw "Hello World" echo in the terminal, setting me on an unyielding path in software development. With a Bachelor of Information Technology from Griffith University and hands-on experience in developing cutting-edge projects like Aussie PicklePro and Nomster, I've honed a diverse skill set across full-stack development. My expertise spans from JavaScript, Angular, and React to Laravel, Python, and various database technologies. Beyond technical prowess, my ability to lead teams, adapt to new challenges, and drive innovation positions me as a dynamic force ready to contribute to groundbreaking projects in the tech landscape.</p>
         </div>
     </div>
 </div> 

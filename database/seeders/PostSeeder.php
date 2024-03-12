@@ -68,7 +68,6 @@ class PostSeeder extends Seeder
             'status'=>'Completed October 23',
             'logo'=>'japresLogo.png'
         ]);
-       
 
         DB::table('posts')->insert(
             ['name'=>'F Service',
