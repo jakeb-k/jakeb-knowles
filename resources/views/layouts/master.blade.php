@@ -26,26 +26,56 @@
 
     </head>
     <script>
-    $(function () {
-        $('.project, .about, .contact, .cta-btn').click(function (e) {
-            e.preventDefault(); // Prevent the default anchor behavior
+$(function () {
+    $('.project, .about, .contact, .cta-btn').click(function (e) {
+        e.preventDefault(); // Prevent the default anchor behavior
 
-            var target;
-            if ($(this).hasClass('project')) {
-                target = $(".project-cont");
-            } else if ($(this).hasClass('about')) {
-                target = $(".aContainer");
-            } else if ($(this).hasClass('contact') ){
-                target = $(".cContainer");
-            }else if ($(this).hasClass('cta-btn') ){
-                target = $(".cContainer");
-            }
+        var target;
+        if ($(this).hasClass('project')) {
+            target = $("#project-title-1");
+        } else if ($(this).hasClass('about')) {
+            target = $(".aContainer");
+        } else if ($(this).hasClass('contact') || $(this).hasClass('cta-btn')) {
+            target = $(".cContainer");
+        }
 
+        // Check if the target exists
+        if (target.length) {
             $('html, body').stop().animate({
                 scrollTop: target.offset().top
             }, 1500);
-        });
+        } else {
+            // Redirect to the home page with a hash indicating the target
+            window.location.href = '/jakebknowles/public/#'+ $(this).attr('class').split(' ')[0];
+        }
     });
+});
+
+// On home page load, check for a hash and execute the scroll if it matches a known target
+$(window).on('load', function() {
+    var hash = window.location.hash.substring(1); // Get the hash (excluding '#')
+    if (hash) {
+        var target;
+        switch (hash) {
+            case 'project':
+                target = $('#project-title-1');
+                break;
+            case 'about':
+                target = $('.aContainer');
+                break;
+            case 'contact':
+            case 'cta-btn': // Assuming you want the same target for 'contact' and 'cta-btn'
+                target = $('.cContainer');
+                break;
+        }
+
+        if (target && target.length) {
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top
+            }, 1500);
+        }
+    }
+});
 
     $(document).ready(function() {
         $(window).scroll(function() {
