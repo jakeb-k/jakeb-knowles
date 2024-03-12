@@ -848,19 +848,18 @@ a.cta-btn:hover, a.cta-btn2:hover {
 }
 
 .post-desc {
-    font-size:18px;
+    font-size:14px;
     font-family:'PT Mono',monospace;
+    padding:10px 20px;
     color:#E5E7EB;
     background:rgb(40, 40, 40); 
     width:42.5%;
-    height:400px; 
-    padding:30px 25px;
+    height:425px; 
     border-radius:10px; 
     text-align:left;
     border:2.5px solid #0061c2;
-    p {
-        margin-bottom:50px; 
-       
+    li{
+        margin:5px 0; 
     }
 
 }
@@ -944,7 +943,7 @@ a.cta-btn:hover, a.cta-btn2:hover {
 .mob-view img{
     width:32.5%; 
     height:auto; 
-    margin:-90px auto 0;
+    margin:-70px auto 0;
     border:2px solid rgb(83, 83, 83);  
 }
 .web-view img{
@@ -1303,11 +1302,12 @@ MEDIA QUERIES
         width:100%;
     }
     .post-desc {
-        width:100%;
+        width:95%;
         font-size:12px; 
+        margin:0 auto; 
     }
     .mob-view img {
-        width:100%; 
+        width:95%; 
         margin:30px auto 0; 
     }
     .post-imgs a {

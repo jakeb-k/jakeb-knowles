@@ -19,7 +19,12 @@
     </div>
     <div class="post-content">
         <div class="post-desc">
-            <p>{{$post->description}}</p>
+            <p>{{$desc[0]}}</p>
+            <ul>
+                <li>{{$desc[1]}}</li>
+                <li>{{$desc[2]}}</li>
+                <li>{{$desc[3]}}</li>
+            </ul>
             <div class="cta-cont2">
                 <a class="cta-btn2" href="{{$post->url}}">View Project</a>
             </div>
