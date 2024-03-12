@@ -515,6 +515,8 @@ ABOUT SECTION STYLING
 
 
 */
+
+
 .aContainer {
     display: flex;
     align-items: space-between;
@@ -547,7 +549,7 @@ ABOUT SECTION STYLING
 }
 
 .aboutContent {
-    width: 50%;
+    min-width: 50%;
     color: #00BBF9;
     display: flex;
     justify-content: center;
@@ -579,9 +581,10 @@ ABOUT SECTION STYLING
 }
 
 .infoBox {
-    margin-left: 10%;
-    height: fit-content;
-    width: 85%;
+    margin-left:10%;
+    height:fit-content ;
+    min-width:85% !important;
+    
     background: rgb(40, 40, 40);
     border-radius: 5px;
     padding: 10px;
@@ -589,10 +592,37 @@ ABOUT SECTION STYLING
     border: 2px solid #00BBF9;
     box-shadow: 0 0 10px #00BBF9;
     p{
-        margin-bottom:25px; 
+        margin-bottom:10px; 
     }
 }
+.typewriter {
 
+    width:fit-content; 
+}
+.type {
+    animation:typing 1.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #00BBF9; }
+  }
+  .typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+  }
+  
 
 /*
 

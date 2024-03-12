@@ -64,8 +64,18 @@
         </div>
     </div>
         <div class="infoBox">
-            <h1> CODE  ·  CREATE  ·  CONQUER </h1>
-            <p>As a natural-born coder, my fascination with technology was ignited the moment I saw "Hello World" echo in the terminal, setting me on an unyielding path in software development. With a Bachelor of Information Technology from Griffith University and hands-on experience in developing cutting-edge projects like Aussie PicklePro and Nomster, I've honed a diverse skill set across full-stack development. My expertise spans from JavaScript, Angular, and React to Laravel, Python, and various database technologies. Beyond technical prowess, my ability to lead teams, adapt to new challenges, and drive innovation positions me as a dynamic force ready to contribute to groundbreaking projects in the tech landscape.</p>
+            <div class="typewriter">
+                <h1> CODE  ·  CREATE  ·  CONQUER </h1>
+            </div>
+           
+            <p> 
+            As a natural-born coder, my fascination with technology was ignited the moment I saw 'Hello World' echo in the terminal, setting me on an unyielding path in software development. 
+                With a Bachelor of Information Technology from Griffith University and hands-on experience in developing 
+                cutting-edge projects like Aussie PicklePro and Nomster, I've honed a diverse skill set across full-stack 
+                development. My expertise spans from JavaScript, Angular, and React to Laravel, Python, and various database 
+                technologies. Beyond technical prowess, my ability to lead teams, adapt to new challenges, and drive 
+                innovation positions me as a dynamic force ready to contribute to groundbreaking projects in the tech landscape.
+            </p>
         </div>
     </div>
 </div> 
@@ -169,8 +179,24 @@ $(document).ready(function() {
     }
 
     window.addEventListener('load', startAnimation);
-});
+});  //bounding box for about sec
+$(document).ready(function() {
+    const typewriteDiv = document.querySelector('.typewriter');
+    const h1Element = typewriteDiv.querySelector('h1');
 
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                h1Element.classList.add('type'); // Add classes to activate animations
+                observer.unobserve(entry.target); // Stop observing once animations are triggered
+            }
+        });
+    }, {
+        threshold: 0.5 // Set the threshold to 50% visibility
+    });
+
+    observer.observe(typewriteDiv);
+});
 </script>
 
 
