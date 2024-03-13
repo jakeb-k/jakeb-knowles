@@ -1,9 +1,9 @@
 @extends('layouts.master')
-<title>{{$post->name}}</title>
+<title>{{$name}}</title>
 @section('content')
 <div class="post-container">
     <div class="post-header">
-        <h1>{{$post->name}}</h1>
+        <h1>{{$name}}</h1>
     </div>
     <div class="post-techs">
         <?php $techs = explode(',', $post->techs) ?>

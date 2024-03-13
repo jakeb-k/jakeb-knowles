@@ -21,7 +21,7 @@ class PostSeeder extends Seeder
             'url'=>'https://github.com/jakeb-k/nomster',
             'techs'=>'HTML5,SASS,Ionic,TypeScript,Angular,SQLite,GitHub,AndroidStudio',
             'status'=>'In Progress - Scheduled Release in 2024',
-            'logo'=>'nomsterLogo.png']);
+            'logo'=>'nomsterLogo.webp']);
             
         DB::table('posts')->insert(
             ['name'=>'Aussie_PicklePro',
@@ -30,7 +30,7 @@ class PostSeeder extends Seeder
             'url'=>'https://aussiepicklepro.com.au/',
             'techs'=>'PHP,Laravel,jQuery,HTML5,SASS,SQLite,GitHub,Linux,Stripe,Hostinger,GoogleAnalytics',
             'status'=>'Completed November 23',
-            'logo'=>'pickleLogo.png'
+            'logo'=>'pickleLogo.webp'
         ]);
         DB::table('posts')->insert(
             ['name'=>"Freemans_Lawns",
@@ -48,7 +48,7 @@ class PostSeeder extends Seeder
             'url'=>'https://matmart.shop/',
             'techs'=>'PHP,Laravel,jQuery,HTML5,SASS,SQLite,GitHub,Linux,Stripe,Hostinger,GoogleAnalytics',
             'status'=>'Completed August 23',
-            'logo'=>'mmLogo.png']);
+            'logo'=>'mmLogo.webp']);
 
         DB::table('posts')->insert(
             ['name'=>'HaHa_Hub',
@@ -57,7 +57,7 @@ class PostSeeder extends Seeder
             'url'=>'https://play.google.com/store/apps/details?id=com.ionic.hahahub&pli=1',
             'techs'=>'HTML5,SASS,Ionic,TypeScript,Angular,GitHub,AndroidStudio,GoogleAds',
             'status'=>'Completed September 23 - Available on the Google Play Store',
-            'logo'=>'hahaLogo.png']);
+            'logo'=>'hahaLogo.webp']);
 
         DB::table('posts')->insert(
             ['name'=>'Japres',
@@ -66,7 +66,7 @@ class PostSeeder extends Seeder
             'url'=>'https://vimeo.com/899423632?share=copy',
             'techs'=>'HTML5,SASS,Ionic,TypeScript,Angular,GitHub,AndroidStudio,Trello',
             'status'=>'Completed October 23',
-            'logo'=>'japresLogo.png'
+            'logo'=>'japresLogo.webp'
         ]);
 
         DB::table('posts')->insert(
@@ -76,7 +76,7 @@ class PostSeeder extends Seeder
             'url'=>'https://foodservice-mock.online/',
             'techs'=>'PHP,Laravel,jQuery,HTML5,SASS,SQLite,GitHub,Linux',
             'status'=>'Completed July 23',
-            'logo'=>'fsLogo.png'
+            'logo'=>'fsLogo.webp'
         ]);
     }
 }

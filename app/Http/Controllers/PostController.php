@@ -94,8 +94,8 @@ class PostController extends Controller
         $items = scandir(public_path('images/'.$name.'/'.$viewMode));
         $itemCount = count($items) - 2;
 
-        $post->name = str_replace("_"," ", $post->name); 
-        return view('posts.post')->with('post', $post)->with('itemCount', $itemCount)->with('webExists', $webExists)->with('desc',$desc);
+        $cleanName = str_replace("_"," ", $post->name); 
+        return view('posts.post')->with('post', $post)->with('itemCount', $itemCount)->with('webExists', $webExists)->with('desc',$desc)->with('name', $cleanName);
     }
 
     
