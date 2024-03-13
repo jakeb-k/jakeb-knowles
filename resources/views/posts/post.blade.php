@@ -33,7 +33,7 @@
             @if (Session::get('viewMode') == 'web')
                 @for($i = 0; $i < $itemCount; $i++) 
                 <div class="web-view resizing"  >
-                    <img class="post-img-slide" src="{{url('images/'.$post->name.'/web/'.$i.'.PNG')}}" />
+                    <img class="post-img-slide" src="{{url('images/'.$post->name.'/web/'.$i.'.webp')}}" />
                 </div>  
                 @endfor
                 <div class="navigation">
@@ -44,7 +44,7 @@
             @else
                 @for($i = 0; $i < $itemCount; $i++)  
                     <div class="mob-view resizing" >
-                        <img class="post-img-slide" src="{{url('images/'.$post->name.'/mobile/'.$i.'.PNG')}}"  style="{{ $i == 0 ? 'display: block;' : 'display: none;' }}" />
+                        <img class="post-img-slide" src="{{url('images/'.$post->name.'/mobile/'.$i.'.webp')}}"  style="{{ $i == 0 ? 'display: block;' : 'display: none;' }}" />
                     </div> 
                 @endfor
                 <div class="navigation">
