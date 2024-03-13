@@ -28,7 +28,7 @@
         </div>
         <div class="profilePic">
             
-            <img src="images/profile.jpg" />
+            <img src="images/profile.webp" alt="profile-pic"/>
          
         </div>
     </div> 
@@ -39,7 +39,7 @@
     
 <div class="aContainer">
     <div class="aboutImg">
-        <img src="images/jakey.jpg">
+        <img src="images/jakey.webp">
     </div>
     <div id="aboutContent">       
         <div class="aboutTitle"><h1>About:</h1>
@@ -158,106 +158,73 @@
 </div>
 <!-- FLY IN SCRIPT CONTROLLER -->
 <script>
-$(document).ready(function() {
-    let flyInCompleted = false;
+$(function() {
     const box1 = document.querySelector('.nameTitle');
     const box2 = document.querySelector('.profilePic');
+    const typewriteDiv = document.querySelector('.typewriter');
+    const h1Element = typewriteDiv ? typewriteDiv.querySelector('h1') : null;
+    const aboutDiv1 = document.querySelector('.aboutImg');
+    const aboutDiv2 = document.querySelector('#aboutContent');
+    const contactForm = document.querySelector('#contact');
+    const title1 = document.querySelector('#project-title-1');
+    const title2 = document.querySelector('#project-title-2');
+    const row1 = document.querySelector('.project-row-1');
+    const row2 = document.querySelector('.project-row-2');
 
+    // Function to start initial animations
     function startAnimation() {
         box1.style.animation = 'flyInFromLeft 2s ease-in-out forwards';
         box2.style.animation = 'flyInFromRight 2s ease-in-out forwards';
-        flyInCompleted = true;
-        if(flyInCompleted){
-            activateSCSSAnimations();
-        } // assuming 'flyIn' takes 2 seconds
+        // Delay the SCSS animations to start after the initial animations
+        setTimeout(activateSCSSAnimations, 2000); // Adjust time as needed
     }
 
+    // Function to activate SCSS animations
     function activateSCSSAnimations() {
-        if (flyInCompleted) {
-            document.querySelectorAll('.fade, .fade2, .flash').forEach(el => {
-                // Trigger the CSS animations by reflow/repaint
-                el.style.animationPlayState = 'running';
-            });
-        }
+        document.querySelectorAll('.fade, .fade2, .flash').forEach(el => {
+            el.style.animationPlayState = 'running';
+        });
     }
+
+    // General observer callback function
+    function observerCallback(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = entry.target;
+                switch(target) {
+                    case typewriteDiv:
+                        h1Element.classList.add('type');
+                        aboutDiv1.style.animation = 'opacityChange 2s linear';
+                        aboutDiv1.style.opacity = '1';
+                        aboutDiv2.style.animation = 'flyUpFromBottom 0.5s linear forwards';
+                        break;
+                    case contactForm:
+                        target.style.animation = 'flyUpFromBottom 0.7s ease-in forwards';
+                        target.style.opacity = '1';
+                        break;
+                    case title1:
+                        row1.style.animation = 'slideFromLeft 1s linear';
+                        break;
+                    case title2:
+                        row2.style.animation = 'slideFromRight 1s linear';
+                        break;
+                }
+                observer.unobserve(target);
+            }
+        });
+    }
+
+    // Setup observers
+    const options = { threshold: [0.7, 0.3] }; // Use array to handle different thresholds
+    const observer = new IntersectionObserver(observerCallback, options);
+
+    // Start observing elements
+    if (typewriteDiv) observer.observe(typewriteDiv);
+    if (contactForm) observer.observe(contactForm);
+    if (title1) observer.observe(title1);
+    if (title2) observer.observe(title2);
 
     window.addEventListener('load', startAnimation);
-});  
-
-$(document).ready(function() {
-    //ABOUT ITEMS
-    const typewriteDiv = document.querySelector('.typewriter');
-    const h1Element = typewriteDiv.querySelector('h1');
-    const aboutDiv1 = document.querySelector('.aboutImg');
-    const aboutDiv2 = document.querySelector('#aboutContent');
-
-    const contactForm = document.querySelector('#contact');
-    
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                //ABOUT ANIMS
-                h1Element.classList.add('type'); 
-                aboutDiv1.style.animation = 'opacityChange 2s linear';
-                aboutDiv1.style.opacity = '1';
-                aboutDiv2.style.animation = 'flyUpFromBottom 0.5s linear forwards';
-            
-                observer.unobserve(entry.target); // Stop observing once animations are triggered
-            }
-        });
-    }, {
-        threshold: 0.7 // Set the threshold to 70% visibility
-    });
-    const observer2 = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-            
-                contactForm.style.animation = 'flyUpFromBottom 0.7s ease-in forwards';
-                contactForm.style.opacity = '1';
-            
-
-                observer2.unobserve(entry.target); // Stop observing once animations are triggered
-            }
-        });
-    }, {
-        threshold: 0.3 // Set the threshold to 70% visibility
-    });
-
-    observer.observe(typewriteDiv);
-    observer2.observe(contactForm);
-
- 
-
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  // Observing individual titles using their IDs
-  const title1 = document.querySelector('#project-title-1');
-  const title2 = document.querySelector('#project-title-2');
-
-  const row1 = document.querySelector('.project-row-1');
-  const row2 = document.querySelector('.project-row-2');
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.animation = `flash 1s ease forwards`;
-
-        // Trigger the corresponding row animation based on the title's ID
-        if (entry.target.id === 'project-title-1') {
-          row1.style.animation = 'slideFromLeft 1s linear';
-        } else if (entry.target.id === 'project-title-2') {
-            row2.style.animation = 'slideFromRight 1s linear';
-        }
-
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.7 });
-
-  // Start observing each title
-  if (title1) observer.observe(title1);
-  if (title2) observer.observe(title2);
 });
 
 

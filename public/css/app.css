@@ -1317,6 +1317,16 @@ MEDIA QUERIES
     overflow-x: scroll;
     overflow-y: hidden;
   }
+  .profilePic img {
+    width:250px;
+    height:250px; 
+  }
+  .infoBox h1 {
+    font-size:28px; 
+  }
+  .aContainer * {
+    animation:none;
+  }
 }
 @media only screen and (max-width: 650px) {
   .w3-content img {

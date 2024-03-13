@@ -39,7 +39,7 @@ class PostSeeder extends Seeder
             'url'=>'https://vimeo.com/899431114?share=copy',
             'techs'=>'PHP,Laravel,jQuery,HTML5,SASS,SQLite,GitHub,Linux,GoogleAnalytics,WordPress',
             'status'=>'Completed January 24',
-            'logo'=>'freemanLogo.jpg']);
+            'logo'=>'freemanLogo.webp']);
 
         DB::table('posts')->insert(
             ['name'=>'Mat-Mart',
