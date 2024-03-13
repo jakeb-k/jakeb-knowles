@@ -92,7 +92,7 @@
                 <div class="project-box">
                     <img src="{{url('images/logos/'.$w->logo)}}" /> 
                     <p>
-                        {{$w->name}}
+                        {{str_replace("_"," ", $w->name);}}
                     </p>
                 </div>
             </a>
@@ -107,7 +107,7 @@
                 <div class="project-box">
                     <img src="{{url('images/logos/'.$m->logo)}}" /> 
                     <p>
-                        {{$m->name}}
+                        {{str_replace("_"," ", $m->name);}}
                     </p>
                 </div>
             </a>

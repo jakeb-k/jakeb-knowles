@@ -9,7 +9,7 @@
         <link rel="icon" type="image/x-icon" href="{{url('images/favicon.ico')}}">
 
         
-        <link rel="stylesheet" href="{{asset('css/app.scss')}}" type="text/css">
+        <link rel="stylesheet" href="{{asset('css/app.css')}}" type="text/css">
         <link rel="canonical" href="https://jakebknowles.com" />
 
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -46,7 +46,8 @@ $(function () {
             }, 1500);
         } else {
             // Redirect to the home page with a hash indicating the target
-            window.location.href = '/jakebknowles/public/#'+ $(this).attr('class').split(' ')[0];
+            window.location.href = '/#'+ $(this).attr('class').split(' ')[0];
+
         }
     });
 });

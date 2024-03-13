@@ -24,7 +24,7 @@ class PostSeeder extends Seeder
             'logo'=>'nomsterLogo.png']);
             
         DB::table('posts')->insert(
-            ['name'=>'Aussie PicklePro',
+            ['name'=>'Aussie_PicklePro',
             'description'=>"Aussie PicklePro is a sophisticated Laravel-based e-commerce platform, hosted on a Linux server I maintain, designed for an optimal online shopping experience+Utilizes Laravel, jQuery, and SCSS to offer dynamic user interfaces, interactive elements, and seamless admin and user functionalities.+Features robust product and order management, user account customization, and engaging UI/UX designs, backed by a comprehensive SQLite database.+Integrates Stripe for secure payments, SMTP for email notifications, and implements SEO strategies to enhance online visibility. ",
             'type'=>'web',
             'url'=>'https://aussiepicklepro.com.au/',
@@ -33,7 +33,7 @@ class PostSeeder extends Seeder
             'logo'=>'pickleLogo.png'
         ]);
         DB::table('posts')->insert(
-            ['name'=>"Freemans Lawns",
+            ['name'=>"Freemans_Lawns",
             'description'=>"Freemans Lawns features a dynamic, SEO-optimized website and a feature-rich blog with a robust CMS, all designed to enhance user engagement and site manageability.+Combines HTML5, SCSS, and jQuery for a compelling UI, alongside Laravel for backend efficiency, offering an engaging, responsive experience across devices.+Implements MVC architecture with SQLite for efficient data management, user authentication with Vite, and engaging jQuery animations to boost interactivity.+Features a WordPress version with ACF for tailored content management, ensuring the site's functionality and design are consistent with the original bespoke solution.",
             'type'=>'web',
             'url'=>'https://vimeo.com/899431114?share=copy',
@@ -51,7 +51,7 @@ class PostSeeder extends Seeder
             'logo'=>'mmLogo.png']);
 
         DB::table('posts')->insert(
-            ['name'=>'HaHa Hub',
+            ['name'=>'HaHa_Hub',
             'description'=>'HaHa Hub is an humor-centered mobile application, developed solo using Angular, Ionic Capacitor, and TypeScript, delivering a unique blend of comedy and technology.+Utilizes Angular and Ionic Capacitor for cross-platform mobile app development, with a TypeScript backend ensuring robust data handling and application logic.+Features API integration for a vast joke collection, a user-friendly UI/UX design with HTML5 and SCSS, and includes Google AdMob for monetization.+Employs Git for version control, TypeScript for backend structure, and a successful Google Ads campaign, demonstrating effective marketing and user engagement strategies.',
             'type'=>'mobile',
             'url'=>'https://play.google.com/store/apps/details?id=com.ionic.hahahub&pli=1',
@@ -70,7 +70,7 @@ class PostSeeder extends Seeder
         ]);
 
         DB::table('posts')->insert(
-            ['name'=>'F Service',
+            ['name'=>'F-Service',
             'description'=>"Food Service is a streamlined web app emulating popular food delivery platforms, offering user-friendly features for customers and restaurants alike.+Users can explore restaurants, order, and favorite dishes, while eateries can manage menus and orders with full CRUD functions.+Built with Laravel and SQLite backend, HTML and CSS frontend, ensuring a durable and visually pleasing experience.+Hosted on a Linux server, utilizing Git for version control, highlighting the system's dependability and secure collaboration.",
             'type'=>'web',
             'url'=>'https://foodservice-mock.online/',
