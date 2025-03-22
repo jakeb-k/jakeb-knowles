@@ -67,14 +67,11 @@
             <div class="typewriter">
                 <h1> CODE  ·  CREATE  ·  CONQUER </h1>
             </div>
-           
+            <p>
+            From the moment I saw 'Hello World' echo in a terminal, I was captivated by the power of technology. This passion set me on a determined path in software development, leading to a Bachelor of Information Technology (Software Development) and nearly two years of professional experience delivering high-quality web and mobile applications.
+            </p>
             <p> 
-                As a natural-born coder, my fascination with technology was ignited the moment I saw 'Hello World' echo in the terminal, setting me on an unyielding path in software development. 
-                With a Bachelor of Information Technology from Griffith University and hands-on experience in developing 
-                cutting-edge projects like Aussie PicklePro and Nomster, I've honed a diverse skill set across full-stack 
-                development. My expertise spans from JavaScript, Angular, and React to Laravel, Python, and various database 
-                technologies. Beyond technical prowess, my ability to lead teams, adapt to new challenges, and drive 
-                innovation positions me as a dynamic force ready to contribute to groundbreaking projects in the tech landscape.
+            Currently a Software Engineer, I specialise in designing, developing, and testing complex business solutions that drive efficiency and innovation across diverse industries. My expertise spans full-stack development, including JavaScript frameworks (React, Angular, Vue, Next), Laravel, Python, and database technologies. I've led initiatives like test suite generation, implemented test-driven development, and collaborated with teams in agile environments to deliver robust, scalable applications.
             </p>
         </div>
     </div>
