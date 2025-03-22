@@ -63,7 +63,6 @@ class PostController extends Controller
             'name'=>'required|max:55',
             'email'=>'required|email',
             'note'=>'required',
-            'g-recaptcha-response' => 'required|captcha'
         ]);
         
         Contact::create($request->all()); 
