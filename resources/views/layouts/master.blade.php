@@ -141,7 +141,7 @@ $(window).on('load', function() {
                 <a class="project" href="">Projects</a>
             </div>
             <div class="fTitle">
-                <p> ©  2023 Jakeb Knowles</p> 
+                <p> © {{ \Carbon\Carbon::now()->year }} Jakeb Knowles</p> 
             </div>
             <div class="fSec">
                 <a class="contact" href="">Contact</a>
