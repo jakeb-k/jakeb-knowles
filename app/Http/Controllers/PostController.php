@@ -11,7 +11,7 @@ use Google\Cloud\RecaptchaEnterprise\V1\RecaptchaEnterpriseServiceClient;
 use Google\Cloud\RecaptchaEnterprise\V1\Event;
 use Google\Cloud\RecaptchaEnterprise\V1\Assessment;
 use Google\Cloud\RecaptchaEnterprise\V1\TokenProperties\InvalidReason;
-
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Session;
 
 
@@ -46,6 +46,19 @@ class PostController extends Controller
     
     public function store(Request $request)
     {
+        // Log::info($request->input('g-recaptcha-response'));
+        $response = app('captcha')->verify(request('g-recaptcha-response'));
+
+        if (! $response) {
+            Log::error('reCAPTCHA failed', [
+                'ip' => request()->ip(),
+                'response' => request('g-recaptcha-response'),
+                'host' => request()->getHost(),
+            ]);
+    
+            return back()->withErrors(['g-recaptcha-response' => 'reCAPTCHA failed, try again.'])->withInput();
+        }
+
         $this->validate($request,[
             'name'=>'required|max:55',
             'email'=>'required|email',
