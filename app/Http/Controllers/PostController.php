@@ -42,33 +42,39 @@ class PostController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     */
-    
-    public function store(Request $request)
-    {
-        // Log::info($request->input('g-recaptcha-response'));
-        $response = app('captcha')->verify(request('g-recaptcha-response'));
-
-        if (! $response) {
-            Log::error('reCAPTCHA failed', [
-                'ip' => request()->ip(),
-                'response' => request('g-recaptcha-response'),
-                'host' => request()->getHost(),
-            ]);
-    
-            return back()->withErrors(['g-recaptcha-response' => 'reCAPTCHA failed, try again.'])->withInput();
-        }
-
-        $this->validate($request,[
-            'name'=>'required|max:55',
-            'email'=>'required|email',
-            'note'=>'required',
-        ]);
-        
-        Contact::create($request->all()); 
-        
-        return redirect()->back(); 
-    }
+     */     
+     public function store(Request $request)
+     {
+         $token = $request->input('g-recaptcha-response');
+         $ip = $request->ip();
+     
+         $captcha = app('captcha');
+         $response = $captcha->verifyResponse($token, $ip);
+     
+         if (! $response) {
+             Log::error('reCAPTCHA failed', [
+                 'ip' => $ip,
+                 'response' => $token,
+                 'host' => $request->getHost(),
+             ]);
+     
+             return back()->withErrors([
+                 'g-recaptcha-response' => 'reCAPTCHA failed, try again.'
+             ])->withInput();
+         }
+     
+         // Manual check passed, now validate the rest
+         $request->validate([
+             'name' => 'required|max:55',
+             'email' => 'required|email',
+             'note' => 'required',
+         ]);
+     
+         Contact::create($request->all());
+     
+         return redirect()->back()->with('success', 'Message sent successfully!');
+     }
+     
 
     /**
      * Display the specified resource.

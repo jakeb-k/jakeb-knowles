@@ -51,7 +51,7 @@ class ContactMail extends Mailable
 
     {
 
-        return $this->subject('Contact US - '. $this->data->subject)
+        return $this->subject('Message From Portfolow Site')
 
                     ->view('posts.contact');
 

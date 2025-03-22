@@ -96,8 +96,40 @@ $(window).on('load', function() {
             }
         });
     });
+    
     </script>
+    @if(session('success'))
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const toast = document.getElementById('success-toast');
+                toast.style.display = 'block';
+
+                setTimeout(() => {
+                    toast.style.opacity = '0';
+                    toast.style.transform = 'translateY(-10px)';
+                    setTimeout(() => toast.remove(), 500);
+                }, 10000);
+            });
+        </script>
+    @endif
     <body>
+    <div id="success-toast" style="
+            display:none;
+            position: fixed;
+            top: 7rem;
+            right: 1rem;
+            background-color: rgb(40,40,40);
+            color: #00BBF9;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px #00BBF950;
+            z-index: 9999;
+            font-family: sans-serif;
+            font-weight: bold;
+            animation: fadeIn 0.3s ease-in-out;
+        ">
+            Message sent successfully!
+        </div>
         <div id="navBar">
             <div class="nSec">
                 <a class="about" href="">About</a>
