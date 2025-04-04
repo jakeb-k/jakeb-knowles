@@ -449,11 +449,13 @@ SPLASH PAGE STYLING
 }
 
 #splashContainer {
-  padding: 80px 0 100px;
+  height: 100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
   background: linear-gradient(rgb(83, 200, 244) 3.8%, rgb(36, 45, 123) 91.1%);
   align-items: center;
 }
-
 .profileContainer {
   margin: 75px auto;
   display: flex;
