@@ -68,7 +68,7 @@
                 <h1> CODE  ·  CREATE  ·  CONQUER </h1>
             </div>
             <p>
-            From the moment I saw 'Hello World' echo in a terminal, I was captivated by the power of technology. This passion set me on a determined path in software development, leading to a Bachelor of Information Technology (Software Development) and nearly two years of professional experience delivering high-quality web and mobile applications.
+            From the moment I saw 'Hello World' echo in a terminal, I was captivated by the power of technology. This passion set me on a determined path in software development, leading to a Bachelor of Information Technology (Software Development) and over two years of professional experience delivering high-quality web and mobile applications.
             </p>
             <p> 
             Currently a Software Engineer, I specialise in designing, developing, and testing complex business solutions that drive efficiency and innovation across diverse industries. My expertise spans full-stack development, including JavaScript frameworks (React, Angular, Vue, Next), Laravel, Python, and database technologies. I've led initiatives like test suite generation, implemented test-driven development, and collaborated with teams in agile environments to deliver robust, scalable applications.
