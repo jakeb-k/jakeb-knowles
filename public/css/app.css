@@ -856,11 +856,11 @@ a.cta-btn:hover, a.cta-btn2:hover {
 .post-desc {
   font-size: 14px;
   font-family: "PT Mono", monospace;
-  padding: 10px 20px;
+  padding: 20px;
   color: #E5E7EB;
   background: rgb(40, 40, 40);
   width: 42.5%;
-  height: 425px;
+  height: fit-content;
   border-radius: 10px;
   text-align: left;
   border: 2.5px solid #0061c2;
@@ -1252,6 +1252,7 @@ MEDIA QUERIES
   }
   .post-content {
     display: flex;
+    align-items: center;
     flex-direction: column-reverse;
     width: 100%;
   }

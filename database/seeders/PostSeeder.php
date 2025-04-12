@@ -22,7 +22,15 @@ class PostSeeder extends Seeder
             'techs'=>'HTML5,SASS,Ionic,TypeScript,Angular,SQLite,GitHub,AndroidStudio',
             'status'=>'In Progress - Scheduled Release in 2024',
             'logo'=>'nomsterLogo.webp']);
-            
+        DB::table('posts')->insert(
+            ['name'=>'Picklewear_v2',
+            'description'=>"Picklewear v2 is the fully reworked successor to Aussie PicklePro, originally a Laravel-based e-commerce app, now rebuilt from the ground up with React.js, Laravel, and Inertia.js, ditching jQuery for a proper modern frontend. What started as a Linux box with basic SSH is now deployed on DigitalOcean with CI/CD handled via Laravel Forge, making deployments clean and automated.+The platform pivots to focus purely on Pickleball apparel after I nearly got sued for 'trademark infringement', and pushes far beyond the original build. Emails run through Zoho’s API, not SMTP, with auto-refreshing tokens and a dedicated inbox, all job-queued for async delivery.+Admins get real-time notifications for mailing list signups, purchases, and order completions. The dashboard's had a full glow-up—filterable, searchable tables, tracked order statuses, and a legit checkout experience with Google API email validation.+Products are synced directly from Alibaba via a custom command, no manual updates needed. UX is sharper with breadcrumbs, throttled search, price and colour filters, and a smoother overall flow. Stripe powers payments, and the whole thing runs like a well-oiled machine, built to scale and stay chill.",
+            'type'=>'web',
+            'url'=>'https://staging.picklewear.com.au/',
+            'techs'=>'PHP,Laravel,React,HTML5,TailwindCSS,MySQL,DigitalOcean,GitHub,Linux,Stripe,GoogleAnalytics',
+            'status'=>'Completed April 25',
+            'logo'=>'pickleLogo.webp'
+        ]);   
         DB::table('posts')->insert(
             ['name'=>'Aussie_PicklePro',
             'description'=>"Aussie PicklePro is a sophisticated Laravel-based e-commerce platform, hosted on a Linux server I maintain, designed for an optimal online shopping experience+Utilizes Laravel, jQuery, and SCSS to offer dynamic user interfaces, interactive elements, and seamless admin and user functionalities.+Features robust product and order management, user account customization, and engaging UI/UX designs, backed by a comprehensive SQLite database.+Integrates Stripe for secure payments, SMTP for email notifications, and implements SEO strategies to enhance online visibility. ",
@@ -78,5 +86,6 @@ class PostSeeder extends Seeder
             'status'=>'Completed July 23',
             'logo'=>'fsLogo.webp'
         ]);
+        
     }
 }
