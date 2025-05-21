@@ -7,12 +7,12 @@
         <div class="nameTitle">
             <h3>
                 <span class="fade">How's</span>
-                <span class="fade">ist </span>
+                <span class="fade">is </span>
                 <span class="fade">Going!</span> 
             </h3>
             <h1> 
                 <span class="flash"> I'm </span>
-                <span class="flash">Jakeb!</span>
+                <span class="flash">Jakeb</span>
             </h1>
             <span class="fade3">
                  <div class="cta-cont">
