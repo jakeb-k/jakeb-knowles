@@ -7,8 +7,8 @@
         <div class="nameTitle">
             <h3>
                 <span class="fade">How's</span>
-                <span class="fade">ist </span>
-                <span class="fade">Going?</span> 
+                <span class="fade">it </span>
+                <span class="fade">Going!</span> 
             </h3>
             <h1> 
                 <span class="flash"> I'm </span>
