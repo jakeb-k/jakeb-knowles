@@ -1,0 +1,26 @@
+name: Deploy to Main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    if: github.actor == 'jakeb-k'  # gate it so only you can trigger
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Droplet
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /home/forge/jakebknowles.com
+            git pull origin main
+            composer install --no-dev --optimize-autoloader
+            # php artisan migrate --force
+            php artisan config:cache
+            php artisan route:cache
+            php artisan view:cache
